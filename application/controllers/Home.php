@@ -28,5 +28,5 @@ class Home extends CI_Controller
     {
         echo 'login';
     }
-    
+
 }
