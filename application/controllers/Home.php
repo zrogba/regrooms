@@ -23,7 +23,6 @@ class Home extends CI_Controller
 //        $dt = $this->home_m->getUsers();
         $this->load->view('index.php');
     }
-
     public function login()
     {
         if ($this->input->server('REQUEST_METHOD') == 'POST')
@@ -33,6 +32,7 @@ class Home extends CI_Controller
         $this->load->view('login.php');
     }
 
+    
     private function loginPost()
     {
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');
