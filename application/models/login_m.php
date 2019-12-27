@@ -1,36 +1,40 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: geraldezeude
+ * Date: 27.12.2019
+ * Time: 0.16
+ */
 
-class login_m extends CI_Model
+    class Login_m extends CI_Model
+    {
+
+    public function loginUser(object $user): ?object
+    {
+        $response = (object) [];
+        $userExists = true;
+
+        $sql = "SELECT * FROM users WHERE email = ? LIMIT 1";
+        $res = $this->db->query($sql, [$user->email])->result();
+
+        if(empty($res[0]))
+            $userExists = false;
+
+        else if(!password_verify($user->password, $res[0]->password))
+            $userExists = false;
+
+        if($userExists)
+        {
+            $response = $res[0];
+            $response->page = 'index.php';
+        }
+else
 {
-    public function login()
-    {
-        if ($this->input->server('REQUEST_METHOD') == 'POST')
-        {
-            return $this->loginPost();
-        }
-        $this->load->view('login.php');
-    }
+    $response->email = $user->email;
+    $response->error = 'Invalid username/password';
+    $response->page = 'login.php';
+}
 
-    private function loginPost()
-    {
-        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required');
-
-
-        if(!$this->form_validation->run())
-        {
-            $data = [
-                'emailErr' => true,
-                'email' => $this->input->post('email')
-            ];
-            if(empty($this->input->post('password')))
-                $data['passwordErr'] = true;
-
-            $this->load->view('login.php', $data);
-        }
-
-        print_r([]);die();
-
-    }
-
+return $response;
+}
 }
