@@ -1,29 +1,7 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: X3D
- * Date: 12/26/2019
- * Time: 12:37 AM
- */
-class login extends CI_Controller
+class login_m extends CI_Model
 {
-
-    /**
-     * Home constructor.
-     */
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->model('login_m');
-    }
-
-    public function index()
-    {
-//        $dt = $this->home_m->getUsers();
-        $this->load->view('index.php');
-    }
-
     public function login()
     {
         if ($this->input->server('REQUEST_METHOD') == 'POST')
