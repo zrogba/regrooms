@@ -6,7 +6,7 @@
  * Time: 0.16
  */
 
-    class Login_m extends CI_Model
+    class login_m extends CI_Model
     {
 
     public function loginUser(object $user): ?object
