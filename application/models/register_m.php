@@ -1,14 +1,19 @@
 <?php
 
-class Register_m extends CI_Model
+class register_m extends CI_Model
 {
 
     public function registerUser(object $user): ?object
     {
         $response = (object) [];
         $userExists = true;
+        $emailExists = true;
 
+        $sql ="INSERT INTO users(username, email, password, password2) VALUES (?,?,?,?)";
+        $sql = "SELECT username FROM users WHERE username = ? LIMIT 1";
         $sql = "SELECT * FROM users WHERE email = ? LIMIT 1";
+
+        $res = $this->db->query($sql, [$user->username])->result();
         $res = $this->db->query($sql, [$user->email])->result();
 
         if(empty($res[0]))
@@ -20,12 +25,16 @@ class Register_m extends CI_Model
         if($userExists)
         {
             $response = $res[0];
-            $response->page = 'index.php';
+            $response->page = 'register.php';
         }
 else
 {
+    $response->username = $user->username;
+    $response->error = 'Username already exists';
     $response->email = $user->email;
     $response->error = 'Email already exists';
+    $response->password2 = $user->password2;
+    $response->error = 'Password must match';
     $response->page = 'register.php';
 }
 

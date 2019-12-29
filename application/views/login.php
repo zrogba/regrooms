@@ -82,7 +82,7 @@
                     <div class="callout-container">
                         <p>  Click here to create  an account</p>
                         <div class="cart-btn mt-100">
-                            <a href="cart.html" class="btn amado-btn w-100">Register</a>
+                            <a href="register" class="btn amado-btn w-100">Register</a>
                         </div>
                     </div>
                 </div>

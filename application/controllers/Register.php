@@ -1,5 +1,5 @@
 <?php
-class Register extends CI_Controller
+class register extends CI_Controller
 {
 
     /**
@@ -13,33 +13,28 @@ class Register extends CI_Controller
 
     public function index()
     {
-//        $dt = $this->home_m->getUsers();
         $this->load->view('register.php');
     }
 
     public function register()
     {
-        if ($this->input->server('REQUEST_METHOD') == 'POST') {
-            return $this->registerPost();
+        if ($this->input->server('REQUEST_METHOD') == 'POST')
+        {
+            return $this->registerUser();
         }
         $this->load->view('register.php');
     }
 
-    private function registerPost()
+    private function registerUser()
     {
-        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+        $this->form_validation->set_rules('user_name', 'username', 'trim|required|min_length[4]|is_unique[users.user_name]');
+        $this->form_validation->set_rules('user_email', 'email', 'trim|required|min_length[4]|valid_email|is_unique[users.email_address]');
+        $this->form_validation->set_rules('user_password', 'password', 'required');
+        $this->form_validation->set_rules('user_password2', 'password2', 'password must match');
 
+        if (!$this->form_validation->run() == FALSE){
 
-        if (!$this->form_validation->run()) {
-            $data = [
-                'emailErr' => true,
-                'email' => $this->input->post('email')
-            ];
-            if (empty($this->input->post('password')))
-                $data['passwordErr'] = true;
-
-            $this->load->view('register.php', $data);
+            $this->load->view('register.php');
         }
 
         print_r([]);

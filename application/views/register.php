@@ -1,16 +1,37 @@
 <?php $this->load->view('header.php', ['title'=>'Register']); ?>
+<form action="register.php">
+    <div id="login-box">
+        <div class="left">
+            <h1>Sign up</h1>
+            <div class="form">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username"required autofocus value="<?php echo $username??null; ?>">
+                <?php if(!empty($usernameErr)){
+                    echo '<span style="font-size: 12px;color: red">username required</span>';
+                } ?>
+            </div>
+            <div class="form">
+                <input type="text" class="form-control" id="email" name="email" placeholder="E-mail" required autofocus value="<?php echo $email??null; ?>">
+                <?php if(!empty($emailErr)){
+                    echo '<span style="font-size: 12px;color: red">email required</span>';
+                } ?>
+            </div>
+            <div class="form">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                <?php if(!empty($passwordErr)){
+                    echo '<span style="font-size: 12px;color: red">password required</span>';
+                } ?>
+                <input type="password2" class="form-control" id="password2" name="password2" placeholder="Retype password" />
+                <?php if(!empty($password2Err)){
+                    echo '<span style="font-size: 12px;color: red">password must match</span>';
+                } ?>
+            </div>
+            <div class="form">
+                <input type="submit" name="signup_submit" value="Sign me up" />
+            </div>
+        </div>
 
-<div id="login-box">
-    <div class="left">
-        <h1>Sign up</h1>
+</form>
 
-        <input type="text" name="username" placeholder="Username" />
-        <input type="text" name="email" placeholder="E-mail" />
-        <input type="password" name="password" placeholder="Password" />
-        <input type="password" name="password2" placeholder="Retype password" />
-
-        <input type="submit" name="signup_submit" value="Sign me up" />
-    </div>
     <style>
         @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
         *:focus {
@@ -182,7 +203,5 @@
         <button class="social-signin twitter">Log in with Twitter</button>
         <button class="social-signin google">Log in with Google+</button>
     </div>
-    <div class="or">OR</div>
 </div>
-
 <?php $this->load->view('footer.php',['hideNewsLetter' => true]); ?>
