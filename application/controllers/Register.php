@@ -18,12 +18,12 @@ class register extends CI_Controller
 
     public function register()
     {
-        if ($this->input->server('REQUEST_METHOD') == 'POST')
-        {
+        if ($this->input->server('REQUEST_METHOD') == 'post') {
             return $this->registerUser();
         }
         $this->load->view('register.php');
     }
+
 
     private function registerUser()
     {
@@ -32,8 +32,17 @@ class register extends CI_Controller
         $this->form_validation->set_rules('user_password', 'password', 'required');
         $this->form_validation->set_rules('user_password2', 'password2', 'password must match');
 
-        if (!$this->form_validation->run() == FALSE){
+        if (!$this->form_validation->run()) {
+            $_POST=
+            $data = [
+                'username'  => $this->input->post('user_name'),
+                'email' => $this->input->post('user_email')
 
+            ];
+            if (empty($this->input->post('password')))
+                $data['usernameErr'] = true;
+                     [ 'emailErr' => true,];
+                     [ 'passwordErr' => true,];
             $this->load->view('register.php');
         }
 

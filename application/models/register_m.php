@@ -1,4 +1,8 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/**
+ * Register
+ *
+ */
 
 class register_m extends CI_Model
 {

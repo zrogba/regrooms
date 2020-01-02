@@ -15,7 +15,7 @@
         $userExists = true;
 
         $sql = "SELECT * FROM users WHERE email = ? LIMIT 1";
-        $res = $this->db->query($sql, [$user->email])->result();
+        $res = $this->db->query($sql, [$user->email])->result(), array($this->user)
 
         if(empty($res[0]))
             $userExists = false;
