@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASE_PATH') OR exit('No direct script access allowed');
 /**
  * Created by PhpStorm.
  * User: X3D
@@ -9,37 +9,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller
 {
 
-    /**
-     * Home constructor.
-     */
     public function __construct()
     {
         parent::__construct();
-        if ($this->input->server('REQUEST_METHOD') == 'POST') {
-            $this->load->model('register_m');
-
-            return $this->LoginUser();
-        }
-        $this->load->view('login.php');
+        //load model
+        $this->load->model('login_m', 'login');
+        $this->load->library('form_validation');
     }
+
     public function index()
     {
 //        $dt = $this->home_m->getUsers();
-        $this->load->view('index.php');
+        $this->load->view('login', '$data');
     }
 
-    private function loginUser()
-    {
-        $this->form_validation->set_rules('user_email', 'email', 'trim|required|min_length[4]|valid_email|is_unique[users.email_address]');
-        $this->form_validation->set_rules('user_password', 'password', 'required');
 
-        if (!$this->form_validation->run() == FALSE){
+    public function loginUser() {
 
-            $this->load->view('register.php');
-        }
+        if (($this->input->server('REQUEST_METHOD') == 'POST')) {
 
-        print_r([]);die();
+            $email    = $this->input->post('email');
+            $password = $this->input->post('password');
 
+            $data = array('emailErr' => TRUE, 'passwordErr' => TRUE);
+
+            return $this->login->User($email, $password, $data);
+
+        } else{
+            $data['message']="success";
+            return $this->login->loginUser($data);
     }
+}
 
+    // Check for user login
 }

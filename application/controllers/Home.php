@@ -21,38 +21,17 @@ class Home extends CI_Controller
     public function index()
     {
 //        $dt = $this->home_m->getUsers();
-        $this->load->view('index.php');
+        $this->load->view('index');
     }
     public function login()
     {
-        if ($this->input->server('REQUEST_METHOD') == 'POST')
+        if ($this->input->server('REQUEST_METHOD') == 'MESSAGE')
         {
-            return $this->loginPost();
+
+            return $this->load->view-('index');
         }
-        $this->load->view('login.php');
+        $this->load->view('login', 'login_m');
     }
 
-
-    private function loginPost()
-    {
-        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required');
-
-
-        if(!$this->form_validation->run())
-        {
-            $data = [
-                'emailErr' => true,
-                'email' => $this->input->post('email')
-            ];
-            if(empty($this->input->post('password')))
-                $data['passwordErr'] = true;
-
-            $this->load->view('login.php', $data);
-        }
-
-        print_r([]);die();
-
-    }
 
 }

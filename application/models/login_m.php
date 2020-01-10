@@ -1,21 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: geraldezeude
- * Date: 27.12.2019
- * Time: 0.16
- */
 
-    class login_m extends CI_Model
+class login_m extends CI_Model
     {
 
-    public function loginUser(object $user): ?object
+    public function loginUser($user, $email, $password)
     {
-        $response = (object) [];
+        $response = $this->get->user($email, $password);
         $userExists = true;
 
-        $sql = "SELECT * FROM users WHERE email = ? LIMIT 1";
-        $res = $this->db->query($sql, [$user->email])->result(), array($this->user)
+        $sql = "SELECT * FROM users WHERE email, password = ? LIMIT 1";
+        $res = $this->db->query($sql, [$user->email])->result();
 
         if(empty($res[0]))
             $userExists = false;
@@ -28,13 +22,13 @@
             $response = $res[0];
             $response->page = 'index.php';
         }
-else
-{
-    $response->email = $user->email;
-    $response->error = 'Invalid username/password';
-    $response->page = 'login.php';
-}
+        else
+        {
+            $response->email = $email->email;
+            $response->error = 'Invalid Email/password';
+            $response->page = 'login';
+        }
 
-return $response;
-}
-}
+        return $response = ['you are logged in'];
+        }
+        }

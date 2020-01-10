@@ -4,7 +4,7 @@
         <div class="left">
             <h1>Sign up</h1>
             <div class="form">
-                <input type="text" class="form-control" id="username" name="username" placeholder="Username"required autofocus value="<?php echo $username??null; ?>">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required autofocus value="<?php echo $username??null; ?>">
                 <?php if(!empty($usernameErr)){
                     echo '<span style="font-size: 12px;color: red">username required</span>';
                 } ?>
@@ -20,7 +20,7 @@
                 <?php if(!empty($passwordErr)){
                     echo '<span style="font-size: 12px;color: red">password required</span>';
                 } ?>
-                <input type="password2" class="form-control" id="password2" name="password2" placeholder="Retype password" />
+                <input type="password" class="form-control" id="password2" name="password2" placeholder="Retype password" />
                 <?php if(!empty($password2Err)){
                     echo '<span style="font-size: 12px;color: red">password must match</span>';
                 } ?>
@@ -31,9 +31,19 @@
         </div>
 
 </form>
+    <div>
+        <div class="right">
+            <span class="loginwith">Sign in with<br />social network</span>
+
+            <button class="social-signin facebook">Log in with facebook</button>
+            <button class="social-signin twitter">Log in with Twitter</button>
+            <button class="social-signin google">Log in with Google+</button>
+        </div>
+
+    </div>
 
     <style>
-        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+        @import url"(https://fonts.googleapis.com/css?family=Roboto:400,300,500)";
         *:focus {
             outline: none;
         }
@@ -125,7 +135,7 @@
             transition: 0.1s ease;
         }
 
-        .or {
+        or {
             position: absolute;
             top: 180px;
             left: 280px;
@@ -196,12 +206,10 @@
             background: #DD4B39;
         }
     </style>
-    <div class="right">
-        <span class="loginwith">Sign in with<br />social network</span>
+    
 
-        <button class="social-signin facebook">Log in with facebook</button>
-        <button class="social-signin twitter">Log in with Twitter</button>
-        <button class="social-signin google">Log in with Google+</button>
     </div>
-</div>
+
+
+
 <?php $this->load->view('footer.php',['hideNewsLetter' => true]); ?>
