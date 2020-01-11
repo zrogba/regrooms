@@ -33,11 +33,12 @@ class Login extends CI_Controller
 
             $data = array('emailErr' => TRUE, 'passwordErr' => TRUE);
 
-            return $this->login->User($email, $password, $data);
+            return $this->load->User($email, $password, $data);
 
         } else{
-            $data['message']="success";
-            return $this->login->loginUser($data);
+            
+            $message[]= "success";
+            return $this->load->loginUser();
     }
 }
 

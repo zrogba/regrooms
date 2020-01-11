@@ -20,7 +20,7 @@ class login_m extends CI_Model
         if($userExists)
         {
             $response = $res[0];
-            $response->page = 'index.php';
+            $response->page = 'index';
         }
         else
         {

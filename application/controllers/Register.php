@@ -20,16 +20,16 @@ class register extends CI_Controller
     public function register()
     {
         if (($this->input->server('REQUEST_METHOD') == 'POST')){
-            $errors = array();
+            $errors[] = array();
 
             if (empty($this->input->post['username'])){
                 $errors[] = ['usernameErr' => true];
 
             if (empty($this->input->post['email'])){
-                $errors[]= ['emailErr' => true];
+                $errors = ['emailErr' => true];
 
         } else {
-                $errors[]= ['you need to register'];
+                $message[] = 'you need to register';
         }
             if (empty($errors));
                 $this->load->view('register_m');
@@ -40,33 +40,37 @@ class register extends CI_Controller
     private function registerUser()
     {
         $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|is_unique[users.user_name]');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        $errors[] = ['required' => 'You must provide a Username.'];
+
         $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[4]|valid_email|is_unique[users.email_address]');
         $this->form_validation->set_rules('password', 'Password', 'required');
+        $errors[] = ['required' => 'You must provide a Username.']|['is_unique' => 'This %s already exists.'];
 
         if ($this->form_validation->run() == FALSE) {
             // if fails
             $this->load->view('register');
         } else    {
             // input data
-            $this->load->view('register_m');
+            $this->load->view('register');
             $data = [
                 'Username' => $this->input->post('username'),
                 'Email' => $this->input->post('email'),
                 'Password' => md5($this->input->post('password')),
             ];
 
-            $success = "Your account has been successfully created!";
+            $errors = "Your account has been successfully created!";
             $this->load->view('register', compact('success'));
 
             $result = $this->db->insert('users', $data);
 
         if ($result == TRUE) {
 
-                $data['message_display'] = 'Registration Successfully !';
+                $message[] = 'Registration Successfully !';
                 $this->load->view('index', $data);
          } else {
-                $data['message_display'] = 'Username already exist!';
-                $data['message_display'] = 'Email already exist!';
+                $message[] = 'Username already exist!';
+                $message[] = 'Email already exist!';
                 $this->load->view('register', $data);
             }
 
