@@ -25,13 +25,11 @@ class Home extends CI_Controller
     }
     public function login()
     {
-        if ($this->input->server('REQUEST_METHOD') == 'MESSAGE')
-        {
-
-            return $this->load->view-('index');
-        }
-        $this->load->view('login', 'login_m');
+        $this->load->view('login');
+        $this->load->model('login_m');
     }
-
-
+    public function register() {
+        $this->load->view('register');
+        $this->load->model('register_m');
+}
 }

@@ -1,4 +1,5 @@
 <?php
+defined('BASE_PATH') OR exit('No direct script access allowed');
 class register extends CI_Controller
 {
 
@@ -18,67 +19,59 @@ class register extends CI_Controller
     // register
     public function register()
     {
-        if (($this->input->server('REQUEST_METHOD') == 'post') && $this->registerUser()) {
+        if (($this->input->server('REQUEST_METHOD') == 'POST')){
+            $errors = array();
 
-            $username = $this->input->post('username');
-            $email = $this->input->post('email');
-            $password = $this->input->post('password');
+            if (empty($this->input->post['username'])){
+                $errors[] = ['usernameErr' => true];
 
-            $data['username'] = $username;
-            $data['email'] = $email;
-            $data['password'] = $password;
+            if (empty($this->input->post['email'])){
+                $errors[]= ['emailErr' => true];
 
-            $this->load->view('register_m');
-
-            if (empty($this->input["email"]["username"])) {
-
-                $usernameErr = true;
-                $emailErr = true;
-                return $this->load->view('register_m');
-            }
         } else {
-            echo "Empty Array";
+                $errors[]= ['you need to register'];
         }
-        return $this->load->view('register');
+            if (empty($errors));
+                $this->load->view('register_m');
+            }
+        }
     }
-
-
+    // Validate to check if user data exist
     private function registerUser()
     {
         $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|is_unique[users.user_name]');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[4]|valid_email|is_unique[users.email_address]');
-        $this->form_validation->set_rules('password', 'Password', 'required|matches[confirm_password]');
-        $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+
         if ($this->form_validation->run() == FALSE) {
             // if fails
-            $data['register_m'] = 'registerUser';
             $this->load->view('register');
-        }
-        else    {
+        } else    {
             // input data
+            $this->load->view('register_m');
             $data = [
-                'user_name' => $this->input->post('user_name'),
-                'email' => $this->input->post('email'),
-                'password' => md5($this->input->post('password')),
+                'Username' => $this->input->post('username'),
+                'Email' => $this->input->post('email'),
+                'Password' => md5($this->input->post('password')),
             ];
 
-            $this->register_m->insert($data);
-
             $success = "Your account has been successfully created!";
-            $result = $this->load->view('register', compact('success'));
+            $this->load->view('register', compact('success'));
+
+            $result = $this->db->insert('users', $data);
 
         if ($result == TRUE) {
 
                 $data['message_display'] = 'Registration Successfully !';
-                $this->load->view('login_m', $data);
+                $this->load->view('index', $data);
          } else {
                 $data['message_display'] = 'Username already exist!';
                 $data['message_display'] = 'Email already exist!';
-                $this->load->view('registration_form', $data);
+                $this->load->view('register', $data);
             }
-            
-        }
-        return $this->register->registerUser($data);
+
+            $this->load->view('register_m');
     }
 
+    }
 }
