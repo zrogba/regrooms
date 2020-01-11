@@ -1,5 +1,5 @@
 <?php $this->load->view('header.php', ['title'=>'Register']); ?>
-<form action="register.php">
+<form action="<?php echo base_url().'register' ?>" method="post">
     <div id="login-box">
         <div class="left">
             <h1>Sign up</h1>
@@ -20,8 +20,8 @@
                 <?php if(!empty($passwordErr)){
                     echo '<span style="font-size: 12px;color: red">password required</span>';
                 } ?>
-                <input type="password" class="form-control" id="password2" name="password2" placeholder="Retype password" />
-                <?php if(!empty($password2Err)){
+                <input type="password" class="form-control" id="Confirm Password" name="Confirm Password" placeholder="Retype password" />
+                <?php if(!empty($passwordErr)){
                     echo '<span style="font-size: 12px;color: red">password must match</span>';
                 } ?>
             </div>
@@ -206,7 +206,7 @@
             background: #DD4B39;
         }
     </style>
-    
+
 
     </div>
 

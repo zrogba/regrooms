@@ -37,31 +37,35 @@ class register extends CI_Controller
                 return $this->load->view('register_m');
             }
         } else {
-
-            return $this->load->view('register');
-
+            echo "Empty Array";
         }
+        return $this->load->view('register');
     }
+
 
     private function registerUser()
     {
         $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|is_unique[users.user_name]');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[4]|valid_email|is_unique[users.email_address]');
-        $this->form_validation->set_rules('password', 'Password', 'required');
-
+        $this->form_validation->set_rules('password', 'Password', 'required|matches[confirm_password]');
+        $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]');
         if ($this->form_validation->run() == FALSE) {
             // if fails
+            $data['register_m'] = 'registerUser';
             $this->load->view('register');
         }
         else    {
             // input data
+            $data = [
+                'user_name' => $this->input->post('user_name'),
+                'email' => $this->input->post('email'),
+                'password' => md5($this->input->post('password')),
+            ];
 
-            $this->load->model('register_m');
-            $this->load->register_m->RegisterUser();
+            $this->register_m->insert($data);
+
             $success = "Your account has been successfully created!";
-            $this->load->view('register', compact('success'));
-
-            $result = $this->input->registerUser();
+            $result = $this->load->view('register', compact('success'));
 
         if ($result == TRUE) {
 
@@ -74,7 +78,7 @@ class register extends CI_Controller
             }
             
         }
-        return $this->load->view('home/index');
+        return $this->register->registerUser($data);
     }
 
 }
