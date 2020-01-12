@@ -1,5 +1,4 @@
 <?php
-defined('BASE_PATH') OR exit('No direct script access allowed');
 class register extends CI_Controller
 {
 
@@ -17,7 +16,7 @@ class register extends CI_Controller
     }
 
     // register
-    public function register()
+    public function registerUser()
     {
         if (($this->input->server('REQUEST_METHOD') == 'POST')){
             $errors[] = array();
@@ -29,7 +28,7 @@ class register extends CI_Controller
                 $errors = ['emailErr' => true];
 
         } else {
-                $message[] = 'you need to register';
+                $errors = ['you need to register'];
         }
             if (empty($errors));
                 $this->load->view('register_m');
@@ -37,19 +36,19 @@ class register extends CI_Controller
         }
     }
     // Validate to check if user data exist
-    private function registerUser()
+    private function user_validation()
     {
-        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|is_unique[users.user_name]');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|is_unique[users.username]');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $errors[] = ['required' => 'You must provide a Username.'];
 
-        $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[4]|valid_email|is_unique[users.email_address]');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[4]|valid_email|is_unique[users.email]');
         $this->form_validation->set_rules('password', 'Password', 'required');
-        $errors[] = ['required' => 'You must provide a Username.']|['is_unique' => 'This %s already exists.'];
+        $errors[] = ['required' => 'You must provide a Email.']|['is_unique' => 'This email already exists.'];
 
         if ($this->form_validation->run() == FALSE) {
             // if fails
-            $this->load->view('register');
+            $this->load->view('registerUser');
         } else    {
             // input data
             $this->load->view('register');
@@ -59,7 +58,7 @@ class register extends CI_Controller
                 'Password' => md5($this->input->post('password')),
             ];
 
-            $errors = "Your account has been successfully created!";
+            $message[] = "Your account has been successfully created!";
             $this->load->view('register', compact('success'));
 
             $result = $this->db->insert('users', $data);

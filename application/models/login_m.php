@@ -8,7 +8,7 @@ class login_m extends CI_Model
         $response = $this->get->user($email, $password);
         $userExists = true;
 
-        $sql = "SELECT * FROM users WHERE email, password = ? LIMIT 1";
+        $sql = "SELECT * WHERE users WHERE email, password = ? LIMIT 1";
         $res = $this->db->query($sql, [$user->email])->result();
 
         if(empty($res[0]))

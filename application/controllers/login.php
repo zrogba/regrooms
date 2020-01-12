@@ -1,5 +1,4 @@
 <?php
-defined('BASE_PATH') OR exit('No direct script access allowed');
 /**
  * Created by PhpStorm.
  * User: X3D
@@ -27,20 +26,64 @@ class Login extends CI_Controller
     public function loginUser() {
 
         if (($this->input->server('REQUEST_METHOD') == 'POST')) {
+            $this->load->model('login_m', '$data');
 
-            $email    = $this->input->post('email');
-            $password = $this->input->post('password');
+            if (empty($this->input->post['email'])){
+                $errors[] = ['emailErr' => true];
 
-            $data = array('emailErr' => TRUE, 'passwordErr' => TRUE);
+            if (empty($this->input->post['Password'])){
+                $errors[] = ['passwordErr' => true];
 
-            return $this->load->User($email, $password, $data);
-
-        } else{
-            
+                 array(
+                    'email' => $this->input->post('email'),
+                    'password' => $this->input->post('password')
+                );
+            } else{
             $message[]= "success";
-            return $this->load->loginUser();
+            $this->login_m->validate();
+
+            } } else {
+                $errors = ['you need to register'];
+            }
+            if (empty($errors));
+            $this->load->view('register_m');
+        }
     }
 }
 
-    // Check for user login
+            function user_validation() {
+                
+            $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[4]|valid_email|is_unique[users.email]');
+            $this->form_validation->set_rules('password', 'Password', 'required');
+            $errors[] = ['required' => 'You must provide a Email.']|['is_unique' => 'This email already exists.'];
+
+            if ($this->form_validation->run()) {
+                // if fails
+                $result = $this->login_m->loginUser($this->input->post('user.email'), $this->input->post('user.password'));
+                if($result == FALSE)
+                {
+                // input data
+                $this->load->view('login');
+                array (
+                    'Email' => $this->input->post('email'),
+                    'Password' => md5($this->input->post('password')),
+                );
+
+                $message[] = "You have successfully logged in!";
+                $this->load->view('index', compact('success'));
+
+            }
+                if ($result == TRUE) {
+
+                    $message[] = 'logged in Successfully !';
+                    $this->load->view('index');
+
+                } else {
+                    $message[] = 'Username already exist!';
+                    $message[] = 'Email already exist!';
+                    $this->load->view('register');
+                }
+
+
+}
 }
