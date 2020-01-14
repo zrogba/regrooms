@@ -14,14 +14,14 @@ class Login extends CI_Controller
         //load model
         $this->load->model('login_m', 'login');
         $this->load->library('form_validation');
+        
     }
 
     public function index()
     {
 //        $dt = $this->home_m->getUsers();
-        $this->load->view('login', '$data');
+        $this->load->view('login');
     }
-
 
     public function loginUser() {
 

@@ -1,4 +1,4 @@
-<?php $this->load->view('header.php', ['title'=>'Login']); ?>
+<?php $this->load->view('header.php', ['title'=>'login/loginUser']); ?>
 
 <div class="cart-table-area section-padding-100">
     <div class="container-fluid">

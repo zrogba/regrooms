@@ -5,7 +5,7 @@ class login_m extends CI_Model
 
     public function loginUser($user, $email, $password)
     {
-        $response = $this->get->user($email, $password);
+        $response = $this->db->get->user($email, $password);
         $userExists = true;
 
         $sql = "SELECT * WHERE users WHERE email, password = ? LIMIT 1";
@@ -29,6 +29,6 @@ class login_m extends CI_Model
             $response->page = 'login';
         }
 
-        return $response = ['you are logged in'];
+        return $response['message']= 'you are logged in';
         }
         }

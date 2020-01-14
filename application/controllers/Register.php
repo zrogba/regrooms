@@ -20,11 +20,13 @@ class register extends CI_Controller
     {
         if (($this->input->server('REQUEST_METHOD') == 'POST')){
             $errors[] = array();
+            $username = ($this->input->post['username']);
+            $email = ($this->input->post['email']);
 
-            if (empty($this->input->post['username'])){
+            if (empty($this->input->post[$username])){
                 $errors[] = ['usernameErr' => true];
 
-            if (empty($this->input->post['email'])){
+            if (empty($this->input->post[$email])){
                 $errors = ['emailErr' => true];
 
         } else {

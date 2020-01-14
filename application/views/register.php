@@ -1,4 +1,4 @@
-<?php $this->load->view('header.php', ['title'=>'Register']); ?>
+<?php $this->load->view('header.php', ['title'=>'Register/registerUser']); ?>
 <form action="<?php echo base_url().'register' ?>" method="post">
     <div id="login-box">
         <div class="left">
