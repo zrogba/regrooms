@@ -3,10 +3,10 @@
 class login_m extends CI_Model
     {
 
-    public function loginUser($user, $email, $password)
+    public function login($data)
     {
-        $response = $this->db->get->user($email, $password);
-        $userExists = true;
+        $this->db->where("email",$email);
+        $this->db->where('password', $password);
 
         $sql = "SELECT * WHERE users WHERE email, password = ? LIMIT 1";
         $res = $this->db->query($sql, [$user->email])->result();

@@ -1,9 +1,10 @@
-<?php $this->load->view('header.php', ['title'=>'Register/registerUser']); ?>
-<form action="<?php echo base_url().'register' ?>" method="post">
+<?php $this->load->view('header.php', ['title'=>'register/registerUser']); ?>
+
     <div id="login-box">
         <div class="left">
             <h1>Sign up</h1>
             <div class="form">
+                <form action="<?php echo base_url().'register.php'?>" method="post">
                 <input type="text" class="form-control" id="username" name="username" placeholder="Username" required autofocus value="<?php echo $username??null; ?>">
                 <?php if(!empty($usernameErr)){
                     echo '<span style="font-size: 12px;color: red">username required</span>';
@@ -16,18 +17,20 @@
                 } ?>
             </div>
             <div class="form">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="<?php echo $password??null; ?>" size="50" />
                 <?php if(!empty($passwordErr)){
                     echo '<span style="font-size: 12px;color: red">password required</span>';
                 } ?>
-                <input type="password" class="form-control" id="Confirm Password" name="Confirm Password" placeholder="Retype password" />
+                <input type="password" class="form-control" id="password2" name="password2" placeholder="Retype password" <?php echo $password2??null; ?>" size="50" />
                 <?php if(!empty($passwordErr)){
                     echo '<span style="font-size: 12px;color: red">password must match</span>';
                 } ?>
             </div>
+
             <div class="form">
-                <input type="submit" name="signup_submit" value="Sign me up" />
+                <button type="submit" class="btn amado-btn w-100">Register</button>
             </div>
+
         </div>
 
 </form>

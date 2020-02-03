@@ -22,8 +22,8 @@ class Login extends CI_Controller
 //        $dt = $this->home_m->getUsers();
         $this->load->view('login');
     }
-
-    public function loginUser() {
+}
+    function login() {
 
         if (($this->input->server('REQUEST_METHOD') == 'POST')) {
             $this->load->model('login_m', '$data');
@@ -48,10 +48,10 @@ class Login extends CI_Controller
             if (empty($errors));
             $this->load->view('register_m');
         }
-    }
+    
 }
 
-            function user_validation() {
+            function loginUser() {
                 
             $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[4]|valid_email|is_unique[users.email]');
             $this->form_validation->set_rules('password', 'Password', 'required');

@@ -2,33 +2,34 @@
 
 class register_m extends CI_Model
 {
-
-    public function registerUser($user, $username, $email, $password)
+    public function insert($data)
     {
-        $response = $this->post->data($username, $email, $password);
-        $userExists = true ['success'];
+        $data=array(
+        'username' => '?', 'email'=>  '?', 'password' => '?',
+    );
+        $response = $this->db->insert('users', $data);
 
-        $sql = "INSERT * INTO users(username, email, password) VALUES (?,?,?,?)";
-        $res = $this->db->query($sql, [$user->email])->result();
+        $sql = "INSERT INTO users ('username','email','password')VALUES (?, ?, ?)";
+        $res = $this->db->query($sql, $response)->result();
 
         if(empty($res[0]))
-            $userExists = false;
+            $response = false;
 
-    else if(!Confirm_Password($user->password, $res[0]->password))
-            $userExists = false;
+    else if(!$res($this->$response, $res[0]->password2))
+            $response = false;
 
-        if($userExists)
+        if($res)
         {
             $response = $res[0];
             $response->page = 'login_m';
         }
     else
     {
-        $response->username = $user->username;
+        $response->username = $data->username;
         $response->error = 'Username already exists';
-        $response->email = $user->email;
+        $response->email = $data->email;
         $response->error = 'Email already exists';
-        $response->Confirm_Password = $user->Confirm_Password;
+        $response->password = $data->Password;
         $response->error = 'Password must match';
         $response->page = 'register.php';
     }

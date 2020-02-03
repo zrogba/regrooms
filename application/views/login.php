@@ -1,4 +1,4 @@
-<?php $this->load->view('header.php', ['title'=>'login/loginUser']); ?>
+<?php $this->load->view('header.php', ['title'=>'Login']); ?>
 
 <div class="cart-table-area section-padding-100">
     <div class="container-fluid">
@@ -10,7 +10,7 @@
 
                 <div class="cart-table clearfix">
                     <div class="form">
-                        <form class="navbar-form"  action="<?php echo base_url().'login' ?>" method="post">
+                        <form class="navbar-form"  action="<?php echo base_url().'login/loginUser' ?>" method="post">
                             <div class="form-group">
                                 <label for="email">Email:</label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="enter email" required autofocus value="<?php echo $email??null; ?>">
