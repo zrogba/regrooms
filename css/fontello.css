@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?12777512');
+  src: url('../font/fontello.eot?12777512#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?12777512') format('woff2'),
+       url('../font/fontello.woff?12777512') format('woff'),
+       url('../font/fontello.ttf?12777512') format('truetype'),
+       url('../font/fontello.svg?12777512#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?12777512#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-user-plus:before { content: '\21'; } /* '!' */
+.icon-user-times:before { content: '\22'; } /* '&quot;' */
+.icon-podcast:before { content: '\23'; } /* '#' */
+.icon-arrows-cw:before { content: '\24'; } /* '$' */
+.icon-right-open-outline:before { content: '\25'; } /* '%' */
+.icon-left-open-outline:before { content: '\26'; } /* '&amp;' */
+.icon-level-down:before { content: '\27'; } /* ''' */
+.icon-level-up:before { content: '\28'; } /* '(' */
+.icon-arrow-curved:before { content: '\29'; } /* ')' */
+.icon-loop:before { content: '\2a'; } /* '*' */
+.icon-cart-arrow-down:before { content: '\2b'; } /* '+' */
+.icon-menu-outline:before { content: '\2c'; } /* ',' */
+.icon-th-large-outline:before { content: '\2d'; } /* '-' */
+.icon-pc:before { content: '\2e'; } /* '.' */
+.icon-security:before { content: '\2f'; } /* '/' */
+.icon-electronics:before { content: '\30'; } /* '0' */
+.icon-healthcare:before { content: '\31'; } /* '1' */
+.icon-media:before { content: '\32'; } /* '2' */
+.icon-tools:before { content: '\33'; } /* '3' */
+.icon-search:before { content: '\34'; } /* '4' */
+.icon-home:before { content: '\35'; } /* '5' */
+.icon-watch:before { content: '\36'; } /* '6' */
+.icon-cc-visa:before { content: '\37'; } /* '7' */
+.icon-cc-mastercard:before { content: '\38'; } /* '8' */
+.icon-cc-discover:before { content: '\39'; } /* '9' */
+.icon-binoculars:before { content: '\3a'; } /* ':' */
+.icon-paypal:before { content: '\3b'; } /* ';' */
+.icon-download:before { content: '\3c'; } /* '&lt;' */
+.icon-help-circled:before { content: '\3d'; } /* '=' */
+.icon-code:before { content: '\3e'; } /* '&gt;' */
+.icon-location-alt:before { content: '\3f'; } /* '?' */
+.icon-mobile:before { content: '\40'; } /* '@' */
+.icon-mobile-alt:before { content: '\41'; } /* 'A' */
+.icon-household:before { content: '\42'; } /* 'B' */
+.icon-cc-paypal:before { content: '\43'; } /* 'C' */
+.icon-resize-full-alt:before { content: '\44'; } /* 'D' */
+.icon-key:before { content: '\45'; } /* 'E' */
+.icon-home-1:before { content: '\46'; } /* 'F' */
+.icon-heart-circled:before { content: '\47'; } /* 'G' */
+.icon-cart:before { content: '\48'; } /* 'H' */
+.icon-store-menu1:before { content: '\49'; } /* 'I' */
+.icon-store-menu:before { content: '\4a'; } /* 'J' */
+.icon-emo-wink2:before { content: '\4b'; } /* 'K' */
+.icon-wishlist:before { content: '\4c'; } /* 'L' */
+.icon-currencies:before { content: '\4d'; } /* 'M' */
+.icon-dress:before { content: '\4e'; } /* 'N' */
+.icon-cart1:before { content: '\4f'; } /* 'O' */
+.icon-shirt:before { content: '\50'; } /* 'P' */
+.icon-automobiles:before { content: '\51'; } /* 'Q' */
+.icon-store-menu-1:before { content: '\52'; } /* 'R' */
+.icon-list-nested:before { content: '\53'; } /* 'S' */
+.icon-expand:before { content: '\54'; } /* 'T' */
+.icon-euro:before { content: '\55'; } /* 'U' */
+.icon-pound:before { content: '\56'; } /* 'V' */
+.icon-dollar:before { content: '\57'; } /* 'W' */
+.icon-user-add-outline:before { content: '\58'; } /* 'X' */
+.icon-user-delete-outline:before { content: '\59'; } /* 'Y' */
+.icon-users-outline:before { content: '\5a'; } /* 'Z' */
+.icon-cancel:before { content: '\5b'; } /* '[' */
+.icon-megaphone:before { content: '\5c'; } /* '\' */
+.icon-info-outline:before { content: '\5d'; } /* ']' */
+.icon-flight:before { content: '\5e'; } /* '^' */
+.icon-truck:before { content: '\5f'; } /* '_' */
+.icon-diamond:before { content: '\60'; } /* '`' */
+.icon-blogger:before { content: '\61'; } /* 'a' */
+.icon-rss-alt:before { content: '\63'; } /* 'c' */
+.icon-gmail:before { content: '\6d'; } /* 'm' */
+.icon-wordpress:before { content: '\77'; } /* 'w' */
+.icon-emo-happy:before { content: '\e801'; } /* '' */
+.icon-basket:before { content: '\e80b'; } /* '' */

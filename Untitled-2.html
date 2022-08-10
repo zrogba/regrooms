@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!--Custom Styling-->
+    <link rel="stylesheet" href="css/main.css">
+    <title>All Products</title>
+</head>
+<body>
+
+<!--NAVIGATION BAR-->
+
+<nav class="top-nav-bar" id="main">
+    <!--CONTAINER TOP--> 
+       <div class="d-flex justify-content-between" id="mid-nav">
+           <div class="brand">
+             <button class="openbtn" onclick="openNav()"><i class="fa fa-bars"></i><br>
+               <span style="font-weight: 500;"> All products</span></button>
+            <span>
+              <a class="navbar-brand" href="index.html"><img class="navbar-brand-icon" src="img/rvlogo.png" alt=""></a>
+   
+            </span>
+   
+         </div>
+   
+   <!--NAV-MID--> 
+         <!---SEARCH-BAR-->
+         <div class="search-box">
+           <form class="form-group"  id="sbox" style="display: inline-block; width: 100%; margin: auto; ">
+             <div class="input-group" style=" ">
+               <div class="input-group-btn search-panel">
+                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="btn-dropdown">
+                   <span id="search_concept">All</span></button>
+                   <ul class="dropdown-menu scrollable-dropdown" role="menu" style="z-index: 9999; outline: 0 !important;">
+                     <li><a href="#">Auto Parts</a></li>
+                     <li><a href="#">Phone Accesories</a></li>
+                     <li><a href="#">Computer Accesories</a></li>
+                     <li><a href="#">Health Body Care</a></li>
+                     <li><a href="#">Female fashion</a></li>
+                     <li><a href="#">Male fashion</a></li>
+                     <li><a href="#">Computer Accesories</a></li>
+                     <li><a href="#">Health and</a></li>
+                     <li><a href="#">Automotive Accesories</a></li>
+                     <li><a href="#">Security Gadgets</a></li>
+                     <li><a href="#">Furniture</a></li>
+                     <li><a href="#">Tickets</a></li>
+                     <li><a href="#">Automotive</a></li>
+                     <li><a href="#">Cell Phone </a></li>
+                     <li><a href="#">Computer Accesories</a></li>
+                     <li><a href="#">Auto Parts</a></li>
+                   </ul>
+                 </div>
+                 <input type="hidden" name="search_param" value="all" id="search_param">
+                 <input type="text" class="form-control" name="x"  placeholder="What are you looking for?...">
+                 <span class="input-group-btn">
+                   <button class="search-btn" type="submit"><i class="fa fa-search"></i></button></span>
+                 </div>
+               </form>
+               <!---SEARCH LINKS-->
+               <div class="d-inline-flex latest text-center">
+                     
+               
+             
+               </div>
+             </div>
+   
+             <div class="blank" style="margin: auto;">
+               <div class="p-2 main" id="member">
+                 <ul>
+                   <li>
+                     <img title="login" alt="login" src="img/home.png">
+                     <br><a href="#">Home</a>
+                   </li>
+                   <li><span class="badge" style="margin-left: 9px; margin-top: 7px;display: inline-block; position: absolute;">5</span>
+                     <img title="wishlist" alt="wishlist" src="img/wish.png">
+                     <br>
+                     <a href="#">wishlist</a>
+                   </li>
+                   <li><span class="badge" style="margin-left: 9px; margin-top: 10px; display: block; position: absolute;">5</span>
+                     <img title="cart" alt="cart" src="img/cart.png">
+                     <br>
+                     <a href="#">cart</a>
+                   </li>
+                   <li style=""> 
+                    <select id="currency">
+                      <option value="" disabled selected>Select a currency</option>
+                      <option value="dollar">$ USD</option>
+                      <option value="euro">&#8364; EUR</option>
+                      <option value="Pounds">£ GBP</option>
+                      <option value="naira">&#8358; NGN</option>
+                    </select>
+                </li>
+                 </ul>
+               </div>
+             </div>
+           </div><!---memeber end-->
+         <!---CONTAINER END-->
+       </nav>
+       <!--NAVIGATION MENU -->
+   
+   <!--SIDEBAR-->
+   <div id="mySidenav" class="sidenav">
+     <div class="¨menu-side">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <a id="user" href="#"><i class="fa fa-fw fa-user"></i>Login |or join</a>
+       <a id="home" href="#"><i class="fa fa-fw fa-home"></i>Home</a>
+     </div>
+   <div><h5 style="margin-left: 45px;"><a href="">See All</a></h5></div>
+     <ul class="submenu">
+      <li><i class="fa fa-fw fa-female"></i><a href="#"><span>Fashion & Style</span></a>
+       <ul class="hidden">       
+         <li><a href="#">Male wears</a></li>
+         <li><a href="#">Female wears</a></li>
+         <li><a href="#">Male shoes</a></li>
+         <li><a href="#">Female shoes</a></li>
+         <li><a href="#">Juniors</a></li>
+       </ul>
+     </li>
+     <li><i class="fa fa-fw fa-first-aid"></i><a href="#"><span>Health & Body</span></a>
+       <ul class="hidden"> 
+         <li><a href="#">Bodycare</a></li>
+         <li><a href="#">Frangrances</a></li>
+         <li><a href="#">Fitness</a></li>
+         <li><a href="#">Accessories</a></li>
+       </ul>
+     </li>
+     <li><i class="fa fa-mobile"></i><a href="#"><span>Phones</span></a>
+       <ul class="hidden"> 
+         <li><a href="#">Apple/ios</a></li>
+         <li><a href="#">Androids</a></li>
+         <li><a href="#">Grades</a></li>
+         <li><a href="#">Accessories</a></li>
+       </ul>
+     </li>
+     <li><i class="fa fa-laptop"></i><a href="#"><span>Computers</span></a>
+       <ul class="hidden">
+         <li><a href="#">Laptops</a></li>
+         <li><a href="#">Desktops</a></li>
+         <li><a href="#">Grades</a></li>
+         <li><a href="#">Accessories</a></li>
+       </ul>
+     </li>
+     <li><i class="fa fa-plug"></i><a href="#"><span>Electronics</span></a>
+       <ul class="hidden">
+         <li><a href="#">For Home </a></li>
+         <li><a href="#">For Office </a></li>
+         <li><a href="#">For Security </a></li>
+         <li><a href="#">Others</a></li>
+       </ul>
+     </li>
+     <li><i class="fas fa-icons"></i><a href="#"><span>Entertainment</span></a>
+       <ul class="hidden">
+         <li><a href="#">Games</a></li>
+         <li><a href="#">E-Books</a></li>
+         <li><a href="#">Dowloads</a></li>
+         <li><a href="#">Templates</a></li>
+       </ul>
+     </li>
+     <li><i class="fa fa-car"></i><a href="#"><span>Auto</span></a>
+       <ul class="hidden">
+         <li><a href="#">Auto Sale</a></li>
+         <li><a href="#">Repairs</a></li>
+         <li><a href="#">Auto parts</a></li>
+         <li><a href="#">Vehicle Security</a></li>
+       </ul>
+     </li>
+     <li><i class="fa fa-home"></i><a href="#"><span>Household</span>
+       </a>
+       <ul class="hidden">
+        <li><a href="#">Office</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Outdoor</a></li>
+      </ul>
+    </li>
+   </ul>
+   </div>
+
+<!---main-bar--->
+<div class="row">
+  <ol class="d" id="bar3">
+    <li><a href="">Blog</a>
+    </li>
+    <li><a href="#">Sell on Regrooms</a>
+    </li>
+    <li><a href="#">Track your order</a>
+    </li>
+    <li><a href="#">Recently viewed<span class="fa fa-arrow-down"></span></a>
+    </li>     
+    </ol>
+</div>
+
+<!--main-bar-->
+
+
+<ul>
+  <li class="back-to">
+    <a href="index.html">Home</a> <span class="pad-menu">></span></span></a><a href="store.html">Store</a>
+  </li>
+</ul>
+
+      <!---product selection-->
+<div class="container" id="store-links">
+   
+  <ul class="store-links">
+    <li>
+      <a href="#fashion-pg"><img src="img/clothingsicon.png" alt="fashion" class="img-icon">Clothings</a>
+    </li>
+    <li>
+      <a href="#fashion-pg"><img src="img/apparelsicon.png" alt="fashion" class="img-icon">Shoes & Apparels</a>
+    </li>
+    <li>
+      <a href=""><img src="img/healthicon.png" alt="fashion" class="img-icon">Health & Beauty</a>
+    </li> 
+    <li>
+      <a href=""><img src="img/deviceicon.png" alt="fashion" class="img-icon">Phones & Devices</a>
+    </li>
+    <li>
+      <a href=""><img src="img/houseicon.png" alt="fashion" class="img-icon">Home & Garden</a>
+    </li>
+    <li>
+      <a href=""><img src="img/computericon.png" alt="fashion" class="img-icon">Office & Business</a>
+    </li>
+    <li>
+      <a href=""><img src="img/appliancesicon.png" alt="fashion" class="img-icon">Electronics</a>
+    </li>
+  
+    <li>
+      <a href="#autom"><img src="img/autoicon.png" alt="fashion" class="img-icon">Automobiles</a>
+    </li>
+    <li>
+      <a href="#gifts"><img src="img/giftsicon.png" alt="fashion" class="img-icon">Events & Gifts</a>
+    </li>
+    <li>
+      <a href=""><img src="img/toolsicon.png" alt="fashion" class="img-icon">Tools & Crafts</a>
+    </li>
+    
+    <li>
+      <a href="#autom"><img src="img/securityicon.png" alt="fashion" class="img-icon">Secuirty & Protection</a>
+    </li>
+    <li>
+      <a href="#autom"><img src="img/moreicon.png" alt="fashion" class="img-icon">More Categories</a>
+    </li>
+  
+
+  </ul>
+    
+    </div>
+
+<div class="container" style="background-color: white;" id="categories-we">
+  <h4>Clothings</h4>
+  <div class="d-flex" id="fa g">
+<div class="column">
+  <a href="#">Female Tops</a>
+  <a href="#">Blouse & Dresses</a>
+  <a href="#">Gowns & Jumpsuits</a>
+  <a href="#">Bodysuits</a>
+  <a href="#">Babies & Kids</a>
+  
+</div>
+
+<div class="column">
+  
+  <a href="#">Male Tops</a>
+  <a href="#">Men Shirts</a>
+  <a href="#">Suits & Ties</a>
+  <a href="#">Hoodies & Sweatshirts</a>
+  <a href="#">Coats & Jackets</a>
+</div>
+   
+    <div class="column">
+      <a href="#">Female Pants</a>
+      <a href="#">Shorts & Jumpers</a>
+      <a href="#">Underwears & Panties</a>
+  <a href="#">Jeans & Trousers</a>
+  <a href="#">Swimwears</a>
+    </div>
+
+  
+<div class="column">
+  <a href="#">Work-wear</a>  
+  <a href="#">Costumes & Uniforms</a>
+  <a href="#">Clothing Accessories</a>
+  <a href="#">Wedding Clothings</a>
+  <a href="#">Scarfs & Attires</a>
+</div>
+
+  </div>
+ 
+  <hr>
+  <h4>Shoes & Apparels</h4>
+  <div class="d-flex" id="fa g">
+
+<div class="column">
+  <a href="#">Female Shoes</a>
+  <a href="#">Male Shoes</a>
+  <a href="#">Kid's Shoes</a>
+  <a href="#">Teen Shoes</a>
+</div>
+   
+    <div class="column">
+      <a href="#">Female Bags</a>
+      <a href="#">Gloves & Masks</a>
+      <a href="#">Back-packs</a>
+      <a href="#">Luggages & Cases</a>
+    </div>
+
+   
+<div class="column">
+  <a href="#">Watches</a>
+  <a href="#">Belts</a>
+  <a href="#">Glasses</a>
+  <a href="#">Jewelries</a>
+
+</div>
+  
+<div class="column">
+  <a href="#">Travel Bags</a>  
+  <a href="#">Backpacks</a>
+  <a href="#">Purses & Pouches</a>
+  <a href="#">Wallets & Holders</a>
+</div>
+
+  </div>
+ 
+  <hr>
+  <h4>Health & Beauty</h4>
+  
+  <div class="d-flex" id=" on-pg">
+   
+<div class="column">
+  <a href="#">Personal Care</a>
+  <a href="#">Cosmetics</a>
+  <a href="#">Female Hygiene</a>
+</div>
+   
+    <div class="column">
+      <a href="#">Skin Care</a>
+      <a href="#">Hair Care</a>
+      <a href="#">Fragrances</a>
+
+    </div>
+
+   
+<div class="column">
+  <a href="#">Medical Supplies</a>
+  <a href="#">Oral Care</a>
+  <a href="#">Bath & Shower</a>
+</div>
+  
+<div class="column">
+  <a href="#">Sexual Wellness</a>
+  <a href="#">Male Grooming</a>
+  <a href="#">Vision Care</a>
+
+</div>
+
+  </div>
+<hr>
+  <h4>Phones & Devices</h4>
+  <div class="d-flex" id="fashig">
+   
+   
+<div class="column">
+  <a href="#">Iphones</a>
+  <a href="#">Android</a>
+  <a href="#">Tablets</a>
+  <a href="#">Wearable Devices</a>
+
+</div>
+   
+    <div class="column">
+      <a href="#">Earphones & Earbuds</a>
+      <a href="#">Audio Devices</a>
+      <a href="#">Headphones & Speaker</a>
+      <a href="#">Used Phones</a>
+    </div>
+
+   
+<div class="column">
+  <a href="#">Mini Speakers</a>
+  <a href="#">Media Devices</a>
+  <a href="#">Mini-Devices</a>
+  <a href="#">Parts & repairs</a>
+
+</div>
+  
+<div class="column">
+  <a href="#">Wireless Devices</a>
+  <a href="#">Communication Equipments</a>
+  <a href="#">Refurbished Phones</a>
+  <a href="#">Cases & Protection</a>
+ 
+
+</div>
+
+  </div>
+  <hr>
+
+  <h4>Home & Garden</h4>
+  <div class="d-flex" id="gifts">
+
+   
+<div class="column">
+  <a href="#">Home Furniture</a>
+  <a href="#">Bar & Corner</a>
+  <a href="#">Garden Equipments</a>
+</div>
+   
+    <div class="column">
+      <a href="#">Kitchen & Dining</a>
+      <a href="#">Vacuum & Cleaning</a>
+      <a href="#">Party & </a>
+    </div>
+
+   
+<div class="column">
+  <a href="#">Home Decor</a>
+  <a href="#">Blinds & Tablewares</a>
+  <a href="#">Pets</a>
+
+</div>
+  
+<div class="column">
+  <a href="#">Pots & Pans</a>
+  <a href="#">Plates & Cutlery</a>
+  <a href="#">Storage & Organization</a>
+  
+</div>
+
+  </div>
+  <hr>
+  
+
+  <h4>Office & Business</h4>
+  <div class="d-flex" id="fa pg">
+
+   
+<div class="column">
+  <a href="#">Planners & Schedulers</a>
+  <a href="#">Books & Stationeries</a>
+  <a href="#">Office Decor</a>
+ 
+</div>
+   
+    <div class="column">
+      <a href="#">Storage & Cabinets</a>
+      <a href="#">Office Appliances</a>
+      <a href="#">Office Furnitures</a>
+     
+    </div>
+
+   
+<div class="column">
+  <a href="#">Printers & Scanners</a>
+  <a href="#">Mailing & Packaging</a>
+  <a href="#">Professinal Services</a>
+</div>
+  
+<div class="column">
+  <a href="#">Filing & Folders</a>
+  <a href="#">Security & Safety</a>
+  <a href="#">Ink & Toners</a>
+
+</div>
+
+  </div>
+<hr>
+  <h4>Electronics</h4>
+  <div class="d-flex" id="gifts">
+
+   
+<div class="column">
+  <a href="#">Desktops</a>
+  <a href="#">Laptops</a>
+  <a href="#">Projectors</a>
+</div>
+ 
+
+   
+<div class="column">
+  <a href="#">Small Appliances</a>
+  <a href="#">Cables & Outputs</a>
+  <a href="#">Monitors</a>
+ 
+</div>
+    
+<div class="column">
+  <a href="#">Televisions</a>
+  <a href="#">Home Theater</a>
+  <a href="#">Video Games & Consoles</a>
+</div>
+<div class="column">
+  <a href="#">Headphones & Earbuds</a>
+  <a href="#">Portable Devices</a>
+  <a href="#">Parts & Connections</a>
+</div>
+
+  </div>
+
+  <hr>
+  <h4>Automobiles</h4>
+  <div class="d-flex" id="autom">
+
+   
+<div class="column">
+  <a href="#">Cars</a>
+  <a href="#">Buses</a>
+  <a href="#">Vans</a>
+</div>
+   
+    <div class="column">
+      <a href="#">Trucks</a>
+      <a href="#">Car Electronics</a>
+      <a href="#">Rentals & Hire</a>
+    </div>
+
+
+    <div class="column">
+      <a href="#">Auto Parts</a>
+      <a href="#">Motorcycle</a>
+      <a href="#">ATV, Other Vehicle</a>
+    </div>
+
+    <div class="column">
+      <a href="#">Tires</a>
+      <a href="#">Rims</a>
+      <a href="#">Car Wash & Maintenance</a>
+     
+    </div>
+
+  </div>
+  <hr>
+  <h4>Events & Gifts</h4>
+  <div class="d-flex" id="fas ">
+
+   
+<div class="column">
+  <a href="#">Decorations</a>
+  <a href="#">Souviners</a>
+ 
+</div>
+   
+    <div class="column">
+      <a href="#">Gift Baskets</a>
+      <a href="#">Personalized Gifts</a>
+     
+    </div>
+
+   
+<div class="column">
+  <a href="#">Stationery & Cards</a>
+  <a href="#">Photo Gifts & Prints</a>
+  
+</div>
+  
+<div class="column">
+
+  <a href="#">Food & Grocries</a>
+  <a href="#">Outdoor Lightings</a>
+</div>
+
+  </div>
+
+<hr>
+  <h4>Tools & Crafts</h4>
+  <div class="d-flex">
+   
+<div class="column">
+  <a href="#">Toys & Games</a>
+  <a href="#">Free Media</a>
+  <a href="#">Construction Tools</a>
+</div>
+   
+    <div class="column">
+      <a href="#">Power Tools</a>
+      <a href="#">Tool parts</a>
+      <a href="#">Crafts & Sewing</a>
+    </div>
+
+   
+<div class="column">
+  <a href="#">Collectibles</a>
+  <a href="#">D.I.Y</a>
+  <a href="#">Garden Tools</a>
+ 
+
+</div>
+  
+<div class="column">
+  <a href="#"> Musical Instruments</a>
+  <a href="#">Pet Supplies & Products</a>
+  <a href="#">Hand Tools</a>
+</div>
+
+  </div>
+
+  <hr>
+  <h4>Security & Potection</h4>
+  <div class="d-flex">
+   
+<div class="column">
+  <a href="#">Video & Surveillance</a>
+  <a href="#">Security Kits</a>
+  <a href="#">Intercom & Communication</a>
+</div>
+   
+    <div class="column">
+      <a href="#">Emergency Kits</a>
+      <a href="#">Self Defense Supplies</a>
+      <a href="#">Alarm System</a>
+    </div>
+
+   
+<div class="column">
+  <a href="#">Fire Protection</a>
+  <a href="#">Protective Gears</a>
+  <a href="#">Security Locks</a>
+ 
+
+</div>
+  
+<div class="column">
+  <a href="#">Lightning Protection</a>
+  <a href="#">Transmission & Cables</a>
+  <a href="#">Explore more</a>
+</div>
+
+  </div>
+  <hr>
+  <h4>More Categories</h4>
+  <div class="d-flex">
+   
+<div class="column">
+  <a href="#">Sports Equipments</a>
+  <a href="#">Lifting Tools</a>
+</div>
+   
+    <div class="column">
+      <a href="#">Camping & Picnic</a>
+      <a href="#">Fishing & Hunting</a>
+    </div>
+
+   
+<div class="column">
+  <a href="#">Musical Instruments</a>
+  <a href="#">Fitness & Body Building</a>
+ 
+
+</div>
+  
+<div class="column">
+  <a href="#">Cycling</a>
+  <a href="#">Learning  & Education</a>
+</div>
+
+  </div>
+
+  
+
+</div>
+</div>
+ 
+<!-- TRENDING -->
+<section class="container">
+<div class="container text-center my-3" id="fashion-pg">
+    <h3>Trending Now</h3>
+    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+        <div class="carousel-inner w-100" role="listbox">
+            <div class="carousel-item row no-gutters active">
+                <div class="col-3 float-left"><img class="img-fluid" alt="Playstation5" src="img/ps5.png"></div>
+                <div class="col-3 float-left"><img class="img-fluid" alt="Xbox" src="img/xboxs.png"></div>
+                <div class="col-3 float-left"><img class="img-fluid" alt="Nike latest" src="img/nikeairVM.png"></div>
+                <div class="col-3 float-left"><img class="img-fluid" alt="Apple watch5" src="img/applewatch5.png"></div>
+            </div>
+            <div class="carousel-item row no-gutters">
+                <div class="col-3 float-left"><img class="img-fluid" alt="distresswhistle" src="img/distresswhistle1.png"></div>
+                <div class="col-3 float-left"><img class="img-fluid" src="img/pepperspraygun1.png"></div>
+                <div class="col-3 float-left"><img class="img-fluid" src="img/samsunggxwatch.png"></div>
+                <div class="col-3 float-left"><img class="img-fluid" src="img/oneplus7pro.png"></div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+
+
+<hr>
+<!-- /Footer -->
+<footer class="footer" style=" padding-top: 0px; padding-bottom: 0px;">
+  <div class="separator"><h2>Shop With Us</h2></div>
+  <div class="flex-container-fluid" id="footer">
+  <div class="d-flex justify-content-around flex-wrap" id="popular">
+      
+      <div class="link">
+            <ul class="links">
+              <li><a  href="#">For Him</a></li>
+              <li><a  href="#">For Her</a></li>   
+              <li><a  href="#">Juniors </a></li>  
+              <li><a  href="#">Shoes/wears</a></li>
+            </ul>
+      
+            <ul class="links">
+            <li> <a  href="#">Automobile</a></li>
+            <li> <a  href="#">Phones</a></li>
+            <li> <a  href="#">Gadgets</a></li>
+            <li> <a  href="#">Accessories</a></li>
+          </ul>
+    
+          <ul class="links">
+            <li> <a  href="#">Replacements</a></li>
+            <li> <a  href="#">Gadgets</a></li>
+            <li> <a  href="#">Accessories</a></li>
+            <li> <a  href="#">Replacements</a></li>
+          </ul>    
+       
+     <ul class="links">
+            <li> <a  href="#">Delivery options</a></li>
+            <li> <a  href="#">Making payments</a></li>
+            <li> <a  href="#">Buyers protection</a></li>
+            <li> <a  href="#">Returns</a></li>
+          </ul>  
+  
+     <ul class="links">
+            <li> <a  href="#">Terms of use</a></li>
+            <li> <a  href="#">F.A.Q</a></li>
+            <li> <a  href="#">Buyers protection</a></li>
+            <li> <a  href="#">Privacy policy</a></li>
+          </ul>  
+ 
+<!-- /get intouch -->
+  
+         
+       
+   <div class="col-sd-6 col-sd-offset-3" id="contact-form">
+     <h4 class="text-center">Get In-touch</h4>
+      <form action="/action_page.php">
+
+        <input type="text" id="Email" name="Email" placeholder="Your email..">
+        <select id="issue" name="issue">
+          <option value="" disabled selected>Select an option</option>
+          <option value="Enquries">Enquiries</option>
+          <option value="Problem">report a problem</option>
+          <option value="usa">payment issues</option>
+        </select>
+
+<div class="contact-dt">
+          
+        
+  <textarea id="subject" name="subject" rows="2" placeholder="Send us a message.."></textarea>
+<button class="contact-btn" type="submit">submit</button>
+      </div>
+     
+  
+      </form>
+ </div>
+  </div>
+  </div>
+   
+
+<!-- /Footer socials -->
+     <div class="separator"><h2>Connect With Us</h2></div>
+ <div class="d-flex flex-wrap justify-content-between" id="footer-e">
+ <div class="logo2">
+       <a class="navbar-brand" href="/">
+      <img class="navbar-brand-icon" src="img/rvlogo.png" alt="">
+    </a>  
+   </div>
+   <div class="contact-box">
+  <form action="/action_page.php">
+        <div class="contact-social">
+            <a href="https://www.facebook.com/"><i id="social-fb" class="fab fa-facebook-square fa-2x social"></i></a>
+            <a href="https://twitter.com/"><i id="social-tw" class="fab fa-twitter-square fa-2x social"></i></a>
+            <a href="https://plus.google.com/"><i id="social-gp" class="fab fa-google-plus-square fa-2x social"></i></a>
+            <a href="mailto:zrogba@gmail.com"><i id="social-yt" class="fab fa-youtube-square fa-2x social"></i></a>
+            <a href="mailto:zrogba@gmail.com"><i id="social-pn" class="fab fa-pinterest-square fa-2x social"></i></a>
+            <a href="mailto:zrogba@gmail.com"><i id="social-in" class="fab fa-instagram-square fa-2x social"></i></a>
+ 
+</div>
+  <div class="contact-info">
+    <input class="" type="email" maxlength="40" placeholder="What's your email?">
+    <button class="info-btn" type="submit"><i class="fa fa-arrow-right"></i></button>
+  
+</div>
+ 
+
+  </form>
+
+</div>
+</div>
+<hr style="margin: 0; border: none;">
+
+    <p class="copyright">© 2020 Regrooms - All Rights Reserved.</p>
+
+</div>
+</footer>
+<!-- /Footer -->
+ 
+<script>
+    $(document).ready(function() {
+       $( ".toggle" ).click( function() {
+           $("#image").toggleClass('flip');
+       });
+   });
+       </script>
+   
+   
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   
+</body>
+
+</html>
+ 
