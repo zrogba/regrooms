@@ -1,4 +1,4 @@
-(document).ready(function(e){
+$(document).ready(function(e){
     $('.search-panel .dropdown-menu').find('a').click(function(e) {
 		e.preventDefault();
 		var param = $(this).attr("href").replace("#","");

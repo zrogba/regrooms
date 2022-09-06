@@ -1,1170 +1,1016 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-
-    <!--Custom Styling-->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/fontello.css">
-    <title>Regrooms</title>
-</head>
-<body>
-  
-  
-
-<!-- Currency, Help, app -->
-<div class="top-wrapper">
-  <span class="curreny-dd">
-    <small><b>Select Currency</b></small> 
-    <label for="currency" id="lb-curr">
-      <img id="flagIcons" src="img/europe-flag-icon-16.png">
-      <select id="currency" name="currency">
-        <option value="img/europe-flag-icon-16.png">&#8364; Euro</option>
-        <option value="img/united-states-of-america-flag-icon-16.png">$ Dollars</option>
-        <option value="img/united-kingdom-flag-icon-16.png">£ Pounds</option>
-        <option value="img/nigeria-flag-icon-16.png">&#8358; Naira</option>
-      </label>
-    </select>
-  </span>
-
-  <ul id="top-bar">
-    <li>
-      <a class="tb-text" href=""><i id="icon-min" class="icon-help-circled"></i>Help</a>
-    </li>
-    <li>
-      <a class="tb-text" href=""><i id="icon-min" class="icon-mobile"></i>App</a>
-    </li>
-  </ul>
-</div>
-
-<!--NAVIGATION BAR-->
-
-<nav class="top-nav-bar">
-  <div class="nav-content container-fluid" id="main">
-    <div class="" id="brand-logo">
-      <a class="" id="brand-logo" href="index.html">
-        <img class="brand-logo" src="img/brand.png" alt="" width="150">
-      </a>
-    </div>
-    
-    <div class="menuwrapper" id="menuwrapper">
-  <span class="menuwrapper-btn" id="btn-menuwrapper">
-    <a id="openNav-btn"  role="button" onclick="openNav()">
-      <i class="icon-th-large-outline" id="menu-btn"><small>Menu</small></i>
-      
-    </a>
-  </span>
-  </div>
-<!-- user orders -->
-
-      
-        <div class="cartwrapper" id="cartwrapper"> 
-          <span id="usr-cart-a" class="usr-cart-a">          
-
-      
-             <a href="" >
-          
-              <i class="icon-cart1"><small>Cart</small> </i>
-  
- 
-             </a>
-             <span class="badge" id="cart">120</span>
-            </span>  
-            </div>
-
-
-    
-  <!--user orders end-->
-
- 
+   <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!--Bootstrap-->
+     
    
-<!---SEARCH-BAR-->
-<div id="search-box">
-      
-       <!-----logo men-btn-->
-      
-       <div class="search-box">
-         <form class="form-group"  id="sbox" style="display: inline-block; width: 100%; margin: auto;">
-           <div class="input-group" id="sch-group">
-             <div class="input-group-btn search-panel">
-               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="btn-dropdown">
-                 <span id="search_concept">All</span></button>
-                 <ul class="dropdown-menu scrollable-dropdown" role="menu" style="z-index: 9999; outline: 0 !important;">
-                   <li><a href="#">Auto Parts</a></li>
-                   <li><a href="#">Phone Accesories</a></li>
-                   <li><a href="#">Computer Accesories</a></li>
-                   <li><a href="#">Health Body Care</a></li>
-                   <li><a href="#">Female fashion</a></li>
-                   <li><a href="#">Male fashion</a></li>
-                   <li><a href="#">Computer Accesories</a></li>
-                   <li><a href="#">Health and</a></li>
-                   <li><a href="#">Automotive Accesories</a></li>
-                   <li><a href="#">Security Gadgets</a></li>
-                   <li><a href="#">Furniture</a></li>
-                   <li><a href="#">Tickets</a></li>
-                   <li><a href="#">Automotive</a></li>
-                   <li><a href="#">Cell Phone </a></li>
-                   <li><a href="#">Computer Accesories</a></li>
-                   <li><a href="#">Auto Parts</a></li>
-                 </ul>
+
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+  rel="stylesheet"
+/>
+
+      <!-- MDB -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <!--Custom Styling-->
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/fontello.css">
+
+
+      <title>Regrooms</title>
+   <body>
+      <div class="topBar">
+         <span class="curr_box">
+            <small><b>Shop in</b></small>
+            <label for="currency" id="curr"></label>
+            <img id="flagIcons" src="img/eu-Flagicon.png" alt="Flag Icons">
+            <select id="currency" name="currency">
+               <option value="img/eu-Flagicon.png">&#8364; Euro</option>
+               <option value="img/usa-Flagicon.png">$ Dollars</option>
+               <option value="img/uk-Flagicon.png">£ Pounds</option>
+               <option value="img/ng-Flagicon.png">&#8358; Naira</option>
+            </select>
+         </span>
+         <ul id="top-bar">
+            <li>
+               <a class="tb-text" href=""><i id="icon-min1" class="-circled"></i>Help</a>
+            </li>
+            <li>
+               <a class="tb-text" href=""><i id="icon-min" class="icon-mobile"></i>App</a>
+            </li>
+         </ul>
+      </div>
+      <!--NAVBAR-->
+      <nav class="topNav">
+         <div class="nav-content container-fluid" id="main">
+            <div class="brand-logo">
+               <a class="" id="brand-link" href="index.html">
+               <img class="brand-logo" src="img/brand.png" alt="" width="150">
+               </a>
+            </div>
+            <div class="menuwrapper" id="menuwrapper">
+               <span class="menuwrapper-btn" id="btn-menuwrapper">
+               <a id="openNav-btn"  role="button" onclick="openNav()">
+               <i class="icon-th-large-outline" id="menu-btn"><small>Menu</small></i>
+               </a>
+               </span>
+            </div>
+            <!-- user orders -->
+            <div class="cartwrapper" id="cartwrapper">
+               <span id="usr-cart-a" class="usr-cart-a">
+               <a href="" >
+               <i class="icon-cart1"><small>Cart</small> </i>
+               </a>
+               <span class="badge" id="cart">120</span>
+               </span>
+            </div>
+            <!---SEARCH-BAR-->
+            <div id="search-box">
+               <!--ogo men-btn-->
+               <div class="search-box">
+                  <form class="form-group"  id="sbox" style="display: inline-block; width: 100%; margin: auto;">
+                     <div class="input-group" id="sch-group">
+                        <div class="input-group-btn search-panel">
+                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="btn-dropdown">
+                           <span id="search_concept">All</span></button>
+                           <ul class="dropdown-menu scrollable-dropdown" role="menu" style="z-index: 9999; outline: 0 !important;">
+                              <li><a href="#">Auto Parts</a></li>
+                              <li><a href="#">Phone Accesories</a></li>
+                              <li><a href="#">Computer Accesories</a></li>
+                              <li><a href="#">Health Body Care</a></li>
+                              <li><a href="#">Female fashion</a></li>
+                              <li><a href="#">Male fashion</a></li>
+                              <li><a href="#">Computer Accesories</a></li>
+                              <li><a href="#">Health and</a></li>
+                              <li><a href="#">Automotive Accesories</a></li>
+                              <li><a href="#">Security Gadgets</a></li>
+                              <li><a href="#">Furniture</a></li>
+                              <li><a href="#">Tickets</a></li>
+                              <li><a href="#">Automotive</a></li>
+                              <li><a href="#">Cell Phone </a></li>
+                              <li><a href="#">Computer Accesories</a></li>
+                              <li><a href="#">Auto Parts</a></li>
+                           </ul>
+                        </div>
+                        <input type="hidden" name="search_param" value="all" id="search_param">
+                        <input type="text" id="search_text" class="form-control" name="x"  placeholder="What are you looking for?...">
+                        <span class="input-group-btn">
+                        <button class="search-btn" type="submit"><i class="icon-search"></i></button></span>
+                     </div>
+                  </form>
                </div>
-               <input type="hidden" name="search_param" value="all" id="search_param">
-               <input type="text" id="search_text" class="form-control" name="x"  placeholder="What are you looking for?...">
-               <span class="input-group-btn">
-                 <button class="search-btn" type="submit"><i class="icon-search"></i></button></span>
-               </div>
-             </form>
             </div>
-  
-              
-            </div> 
-           
-              </div>
-              
-       
-     </nav>
-     <!--NAVIGATION MENU -->
-
-
-<!--SIDEBAR-->
-
-
-
-
-<div id="mySidenav" class="sidenav">
-  <div class="menu-side">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="icon-cancel"></i></a>
-  <a id="user" href="#"><i class="icon-user-add-outline"></i>Login |or join</a></div>
-
-  <div class="sidenav-tab">
-    <button class="tablinks" onclick="openCity(event, 'Mnu-bx')"id="defaultOpen"><i class="icon-th-large-outline"></i>Menu</button>
-    <button class="tablinks" onclick="openCity(event, 'Categories')"><i class="icon-list-nested"></i>Categories</button>
-  </div>
-  
-
-
-  <div id="Mnu-bx" class="tabcontent">
-    <ul class="" id="Mnu-lst">
-               
-               
-      <li><a href="">About Us</a>
-      </li>
-      <li><a href="#">Sell on Regrooms</a>
-      </li>
-      <li><a href="#">Freebies</a>
-      </li>
-      <li><a href="#">Recently viewed<span class="fa fa-arrow-down"></span></a>
-      </li>
-      <li><a href="">Blog</a>
-      </li>
-      <li><a href="#">Become a partner</a>
-      </li>
-    </ul>
-    
-    <div class="sde-btm-bx">
-    <span class="emp-bx">
-      <a class="sidenav-ad-bx" target="_blank" href="img/ctb_stay-home_banner_320x100-02-EN@2x.png">
-        <img src="img/ctb_stay-home_banner_320x100-02-EN@2x.png" class="mini-ads" alt="">
-      </a>
-    </span>
-    <span id="Mnu-socl" class="cntact-socl">
-      <p class="tx-socl">Connect With Us</p>
-      <a href="https://www.facebook.com/"><i id="social-fb" class="fab fa-facebook-square fa-2x social"></i></a>
-      <a href="https://twitter.com/"><i id="social-tw" class="fab fa-twitter-square fa-2x social"></i></a>
-      <a href="https://plus.google.com/"><i id="social-gp" class="fab fa-google-plus-square fa-2x social"></i></a>
-      <a href="mailto:zrogba@gmail.com"><i id="social-yt" class="fab fa-youtube-square fa-2x social"></i></a>
-      <a href="mailto:zrogba@gmail.com"><i id="social-pn" class="fab fa-pinterest-square fa-2x social"></i></a>
-      <a href="mailto:zrogba@gmail.com"><i id="social-in" class="fab fa-instagram-square fa-2x social"></i></a>
-
-    </span>
-    </div>
-  </div>
-
-  <div id="Categories" class="tabcontent">
-
-
-    <ul class="submenu">
-
-  
-      <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-dress"></i>Women Fashion</a>
-       <ul class="hidden">
-         
-        <li>Women</li>
-         <li><a href="#">Tops</a></li>
-         <li><a href="#">Shirts</a></li>
-         <li><a href="#">Dresses & Gowns</a></li>
-         <li><a href="#">pants & Bottoms</a></li>
-         <li><a href="#">Shoes</a></li>
-         <li><a href="#">Bags & & Apparels</a></li>
-    
-       </ul>
-      </li>
-      <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-shirt"></i>Male Fashion</a>
-       <ul class="hidden">
-        <li>Male Fashion</li>
-         <li><a href="#">Tops</a></li>
-         <li><a href="#">Shirts</a></li>
-         <li><a href="#">Shoes</a></li>
-         <li><a href="#">Pants & Jeans</a></li>
-         <li><a href="#">Belta & Apparels</a></li>
-       </ul>
-     </li>
-     <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-watch"></i>Jewelry & Apparels</a>
-       <ul class="hidden">
-        <li>Jewelry & Apparels</li>
-         <li><a href="#">Bodycare</a></li>
-         <li><a href="#">Frangrances</a></li>
-         <li><a href="#">Fitness</a></li>
-         <li><a href="#">Accessories</a></li>
-       </ul>
-     </li>
-      <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-healthcare"></i>Health & Body</a>
-        <ul class="hidden">
-         <li>Health & Body</li>
-          <li><a href="#">Bodycare</a></li>
-          <li><a href="#">Frangrances</a></li>
-          <li><a href="#">Fitness</a></li>
-          <li><a href="#">Accessories</a></li>
-        </ul>
-      </li>
-      <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-mobile"></i>Phones</a>
-        <ul class="hidden">
-         <li>Phones</li>
-          <li><a href="#">Apple/ios</a></li>
-          <li><a href="#">Androids</a></li>
-          <li><a href="#">Grades</a></li>
-          <li><a href="#">Accessories</a></li>
-        </ul>
-      </li>
-      <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-pc"></i>Computers</a>
-        <ul class="hidden">
-         <li>Computers</li>
-          <li><a href="#">Laptops</a></li>
-          <li><a href="#">Desktops</a></li>
-          <li><a href="#">Grades</a></li>
-          <li><a href="#">Accessories</a></li>
-        </ul>
-      </li>
-      <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-electronics"></i>Electronics</a>
-        <ul class="hidden">
-         <li>Electronics</li>
-          <li><a href="#">Small Machines</a></li>
-          <li><a href="#">Wireless & Bluetooth</a></li>
-          <li><a href="#">For Security </a></li>
-          <li><a href="#">Others</a></li>
-        </ul>
-      </li>
-      <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-household"></i>Household</a>
-       <ul class="hidden">
-        <li>Household</li>
-        <li><a href="#">Office</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Outdoor</a></li>
-      </ul>
-     </li>
-     <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-media"></i>Media & Devices</a>
-        <ul class="hidden">
-         <li>Media & Devices</li>
-          <li><a href="#">Games</a></li>
-          <li><a href="#">E-Books</a></li>
-          <li><a href="#">Dowloads</a></li>
-          <li><a href="#">Templates</a></li>
-        </ul>
-      </li>
-      <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-tools"></i>Tools & Crafts</a>
-       <ul class="hidden">
-        <li>Tools & Crafts</li>
-        <li><a href="#">Office</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Outdoor</a></li>
-      </ul>
-     </li> 
-     <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-automobiles"></i>Automobiles</a>
-       <ul class="hidden">
-        <li>Automobiles</li>
-         <li><a href="#">Auto Sale</a></li>
-         <li><a href="#">Repairs</a></li>
-         <li><a href="#">Auto parts</a></li>
-         <li><a href="#">Vehicle Security</a></li>
-       </ul>
-     </li>
-     <li class="submenu-title"><a href="#"><i id="icon-help" class="icon-security"></i>Security & Protection</a>
-       <ul class="hidden">
-        <li>Security</li>
-        <li><a href="#">Office</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Outdoor</a></li>
-      </ul>
-     </li>
-     </ul>
- </div>
-</div>
-<!--SIDE MENU--><!--SLIDER CAROUSEL-->
-
-
-
- <!--HEADER-->
-    <div class="header">
-
-      <div class="slider">
-        <div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/galaxyS.jpg" class="d-block w-100" alt="">
-              
-            </div>
-            <div class="carousel-item">
-              <img src="img/IPHONES.jpg" class="d-block w-100" alt="">
-               
-            </div>
-            
-            <div class="carousel-item">
-              <img src="img/S10PLUS.jpg" class="d-block w-100" alt="">
-        
-            </div>
-            <div class="carousel-item">
-              <img src="img/IPHONES.jpg" class="d-block w-100" alt="">
-             
-            </div>
-          
-          </div>
-          <ol class="carousel-indicators">
-            <li data-target="#slider" data-slide-to="0" class="active"></li>
-            <li data-target="#slider" data-slide-to="1"></li>
-            <li data-target="#slider" data-slide-to="2"></li>
-            <li data-target="#slider" data-slide-to="3"></li>
-          </ol>
-        </div>
-      </div>
-
-    </div>
-<!--                              CAROUSEL END                                           -->
-
-<!-- Intro wrapper -->
-<div class="layout-intro" id="layout-intro">  
-
-  <div class="cards-layout-intro" id="cards-layout-intro">
-    <div class="header-layout-intro"><h4 class="h4-header-layout-intro">New to Regrooms?</h4></div>
-<!-- main view wrapper 1-->
-    <div class="imgs-layout-intro">
-      <div class="images-layout-intro">
-        <a href="clothing.html"  class="a-imgs-layout-intro">
-          <img src="img/fashion-card.png" alt="Female fashion" class="intro-img" width="125" height="125">
-        </a>
-        <p class="p-img-layout-intro">Fashion</p>
-      </div>
-      
-      <div class="images-layout-intro">
-        <a href="electronics.html"  class="a-imgs-layout-intro">
-          <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
-        </a>
-        <p class="p-img-layout-intro">Electronics</p>
-      </div>
-      <div class="images-layout-intro">
-        <a href="#fashion-pg"  class="a-imgs-layout-intro">
-          <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
-        </a>
-        <p class="p-img-layout-intro">Phones and Gadgets</p>
-      </div>
-      <div class="images-layout-intro">
-        <a href="#fashion-pg"class="a-imgs-layout-intro">
-          <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
-        </a> 
-         <p class="p-img-layout-intro">Wedding & Party</p>
-        </div>
-      </div>
-
-      <div class="footer-layout-intro">
-        <a href="store.html" class="a-intro-card-footer">Browse Categories</a>
-      </div>
-    </div>
-
-
-     
- 
-
-<div class="single-card-layout-intro" id="single-card-layout-intro">
-  <div class="header-layout-intro"><h4 class="h4-header-layout-intro">Top deal</h4></div>
-
-  <div class="img-layout-intro">
-    <a href="store.html" class="a-imgs-layout-intro-single">
-      <img src="img/sony-ps5.png" alt="Female fashion" class="top-deal-img" width="275" height="275">
-    </a>
-    <p class="p-img-layout-intro">Get best descount deals in Electronics</p>
-  </div>
-  
-  <div class="footer-layout-intro">
-    <a href="store.html" class="a-intro-card-footer">Explore more deals</a>
-  </div>
-</div>
-
-<div class="single-card-layout-intro" id="single-card-layout-intro">
-  <div class="header-layout-intro"><h4 class="h4-header-layout-intro">Downloads & Offers</h4></div>
- 
-      <div class="img-layout-intro">
-        <a href="household.html"  class="a-imgs-layout-intro-single">
-
-        <img src="img/fashion-card.png" alt="Female fashion" class="intro-img" width="275" height="275">
-     </a>
-     <p class="p-img-layout-intro">Household</p>
-    </div>
-
-      <div class="footer-layout-intro">
-        <a href="store.html" class="a-intro-card-footer">See more</a>
-      </div>
- 
-     
-</div>
-     
-
-<div class="signup-card">
-  <div class="header-layout-intro">
-    <h4> Jump in for better experience</h4></div>
-    <span class="signup-card-btn"><a href="login.html" class="a-signup-card">Sign in securely</a></span>
-
-</div>
-
- 
-      </div>
-        
-<!-- CATEGORY END -->
-
-<!-- SUPER DEALS -->
-<section class="section-flash-deals">
-  <div class="flash-deals-box"><h3 class="h3-flash-deals-box">Flash deals</h3></div>
- <!-- PRODUCT-BOX -->
- <div class=" " id="product-box">
-  <div class="product-grid">
-      <div class="product-image">
-          <a href="product.html">
-              <img class="pic-1" src="img/neckfan.png" alt="Phone Lens">
-                  <img class="pic-2" src="img/neckfan1.png" alt="Phone Lens">
-          </a>
-          <ul class="social">
-              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-          </ul>
-          <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-     
-      <div class="product-content">
-          <h6 class="title"><a href="#">Hands-free Neckband fan</a></h6>
-          <h6>$30.00 - $10.00</h6>
-      </div>
-  </div>
-   </div>
-<div class="product-grid">
-      <div class="product-image">
-          <a href="product.html">
-              <img class="pic-1" src="img/pepperspraygun.png" alt="Phone Lens">
-              <img class="pic-2" src="img/pepperspraygun1.png" alt="Phone Lens">
-          </a>
-          <ul class="social">
-              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-          </ul>
-          <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-     
-      <div class="product-content">
-          <h6 class="title"><a href="#">Pepperspray gun</a></h6>
-          <h6>$2.00 - $8.00</h6>
-      </div>
-  </div>
-   </div> <div class="product-grid">
-      <div class="product-image">
-          <a href="product.html">
-              <img class="pic-1" src="img/smartwatch.png" alt="Phone Lens">
-                  <img class="pic-2" src="img/smartwatch1.png" alt="Phone Lens">
-          </a>
-          <ul class="social">
-              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-          </ul>
-          <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-     
-      <div class="product-content">
-          <h6 class="title"><a href="#"> Smart watch</a></h6>
-          <h6>$3.00 - $7.00</h6>
-      </div>
-  </div>
-   </div> <div class="product-grid">
-      <div class="product-image">
-          <a href="product.html">
-              <img class="pic-1" src="img/spycamera.png" alt="Phone Lens">
-                  <img class="pic-2" src="img/spycamera1.png" alt="Phone Lens">
-          </a>
-          <ul class="social">
-              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-          </ul>
-          <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-     
-      <div class="product-content">
-          <h6 class="title"><a href="#">Spy camera</a></h6>
-          <h6>$25.00 - $45.00</h6>
-      </div>
-  </div>
-   </div> 
-   <div class="product-grid">
-      <div class="product-image">
-          <a href="product.html">
-              <img class="pic-1" src="img/stungunring.png" alt="Phone Lens">
-                  <img class="pic-2" src="img/stungunring1.png" alt="Phone Lens">
-          </a>
-
-          <ul class="social">
-              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-          </ul>
-          <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-     
-      <div class="product-content">
-          <h6 class="title"><a href="#">Stun ring</a></h6>
-          <h6>$1.100 - $2.100</h6>
-      </div>
-  </div>
-   </div>
-
-   
-   <div class="product-grid">
-    <div class="product-image">
-        <a href="product.html">
-            <img class="pic-1" src="img/babyheadwearbunny.png" alt="Phone Lens">
-                <img class="pic-2" src="img/babyheadwearbunny1.png" alt="Phone Lens">
-        </a>
-
-        <ul class="social">
-            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-        </ul>
-        <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-   
-    <div class="product-content">
-        <h6 class="title"><a href="#">Baby headwear </a></h6>
-        <h6>$1.100 - $2.100</h6>
-    </div>
-</div>
- </div> 
- <div class="product-grid">
-    <div class="product-image">
-        <a href="product.html">
-            <img class="pic-1" src="img/babyheadwearbunny.png" alt="Phone Lens">
-                <img class="pic-2" src="img/babyheadwearbunny1.png" alt="Phone Lens">
-        </a>
-
-        <ul class="social">
-            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-        </ul>
-        <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-   
-    <div class="product-content">
-        <h6 class="title"><a href="#">Baby headwear </a></h6>
-        <h6>$1.100 - $2.100</h6>
-    </div>
-</div>
- </div> 
- 
-   <div class="product-grid">
-      <div class="product-image">
-          <a href="product.html">
-              <img class="pic-1" src="img/babyheadwearbunny.png" alt="Phone Lens">
-                  <img class="pic-2" src="img/babyheadwearbunny1.png" alt="Phone Lens">
-          </a>
-
-          <ul class="social">
-              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-          </ul>
-          <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-     
-      <div class="product-content">
-          <h6 class="title"><a href="#">Baby headwear </a></h6>
-          <h6>$1.100 - $2.100</h6>
-      </div>
-  </div>
-   </div>
-   
-</div>
-<p class="swipe">Swipe for more<i class="fas fa-angle-double-left" style="vertical-align: middle; margin-left: 5px;"></i></p>
-</section>
- <!-- SUPER DEALS END -->
-
-
-
-
-
-  <!-- POPULAR THIS WEEK-->
-<section class="popular-prd">
-     
-         <div class="h2-section-title text-center">
-          <h3>Popular this week</h3>
-        </div>
-        <div class="popular-prd-inner">
-
-
-
-       
-         <div class="banner-popular-prd">
-        
-          <div class="img-popular-prd">
-            <a class="banner-popular-prd">
-              <img src="img/carcamera1.png" alt="" class="img-popular-prd">
-            </a>
-           
-          </div>
-        
-          <div class="img-popular-prd">
-            <a class="banner-popular-prd">
-
-              <img src="img/hdphoneprojector1.png" alt="" class="img-popular-prd">
-            </a>   
-          </div>
-
-    
          </div>
-          <div class="banner-popular-prd">
-        
-            <div class="img-popular-prd">
-              <a class="banner-popular-prd">
-                <img src="img/carcamera1.png" alt="" class="img-popular-prd">
-              </a>
-             
+      </nav>
+      <!--NAVIGATION MENU -->
+      <!--SIDEBAR-->
+      <div id="mySidenav" class="sidenav">
+         <div class="menu-side">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="icon-cancel"></i></a>
+            <a id="user" href="#"><i class="icon-user-add-outline"></i>Login |or join</a>
+         </div>
+         <div class="sidenav-tab">
+            <button class="tablinks" onclick="openCity(event, 'Mnu-bx')" id= "defaultOpen"><i class="icon-th-large-outline"></i>Menu</button>
+            <button class="tablinks" onclick="openCity(event, 'Categories')"><i class="icon-list-nested"></i>Categories</button>
+         </div>
+         <div id="Mnu-bx" class="tabcontent">
+            <ul class="" id="Mnu-lst">
+               <li><a href="">About Us</a>
+               </li>
+               <li><a href="#">Sell on Regrooms</a>
+               </li>
+               <li><a href="#">Freebies</a>
+               </li>
+               <li><a href="#">Recently viewed<span class="fa fa-arrow-down"></span></a>
+               </li>
+               <li><a href="">Blog</a>
+               </li>
+               <li><a href="#">Become a partner</a>
+               </li>
+            </ul>
+            <div class="sde-btm-bx">
+               <span class="emp-bx">
+               <a class="sidenav-ad-bx" target="_blank" href="img/ctb_stay-home_banner_320x100-02-EN@2x.png">
+               <img src="img/ctb_stay-home_banner_320x100-02-EN@2x.png" class="mini-ads" alt="">
+               </a>
+               </span>
+               <span id="Mnu-socl" class="cntact-socl">
+               <span id="Mnutxt" style="  width: 100%; justify-content: center; display: flex;">Connect With Us</span>
+               <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x social"></i></a>
+               <a href="https://twitter.com/"><i class="fab fa-twitter-square fa-2x social"></i></a>
+               <a href="https://plus.google.com/"><i class="fab fa-google-plus-square fa-2x social"></i></a>
+               <a href="mailto:zrogba@gmail.com"><i class="fab fa-youtube-square fa-2x social"></i></a>
+               <a href="mailto:zrogba@gmail.com"><i class="fab fa-pinterest-square fa-2x social"></i></a>
+               <a href="mailto:zrogba@gmail.com"><i class="fab fa-instagram-square fa-2x social"></i></a>
+               </span>
             </div>
-          
-  
-            <div class="img-popular-prd">
-            <a class="banner-popular-prd">
-              <img src="img/fash3.jpg" alt=""class="img-popular-prd">
-            </a>
-   
+         </div>
+         <div id="Categories" class="tabcontent">
+            <ul class="submenu">
+               <li class="submenu-title">
+                  <a href="#" class="" ><i class="icon-dress"></i>Women Fashion</a>
+                  <ul class="hidden">
+                     <li>Women</li>
+                     <li><a href="#">Tops</a></li>
+                     <li><a href="#">Shirts</a></li>
+                     <li><a href="#">Dresses & Gowns</a></li>
+                     <li><a href="#">pants & Bottoms</a></li>
+                     <li><a href="#">Shoes</a></li>
+                     <li><a href="#">Bags & & Apparels</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i  class="icon-shirt"></i>Male Fashion</a>
+                  <ul class="hidden">
+                     <li>Male Fashion</li>
+                     <li><a href="#">Tops</a></li>
+                     <li><a href="#">Shirts</a></li>
+                     <li><a href="#">Shoes</a></li>
+                     <li><a href="#">Pants & Jeans</a></li>
+                     <li><a href="#">Belta & Apparels</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i class="icon-watch"></i>Jewelry & Apparels</a>
+                  <ul class="hidden">
+                     <li>Jewelry & Apparels</li>
+                     <li><a href="#">Bodycare</a></li>
+                     <li><a href="#">Frangrances</a></li>
+                     <li><a href="#">Fitness</a></li>
+                     <li><a href="#">Accessories</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i class="icon-healthcare"></i>Health & Body</a>
+                  <ul class="hidden">
+                     <li>Health & Body</li>
+                     <li><a href="#">Bodycare</a></li>
+                     <li><a href="#">Frangrances</a></li>
+                     <li><a href="#">Fitness</a></li>
+                     <li><a href="#">Accessories</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i class="icon-mobile"></i>Phones</a>
+                  <ul class="hidden">
+                     <li>Phones</li>
+                     <li><a href="#">Apple/ios</a></li>
+                     <li><a href="#">Androids</a></li>
+                     <li><a href="#">Grades</a></li>
+                     <li><a href="#">Accessories</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i class="icon-pc"></i>Computers</a>
+                  <ul class="hidden">
+                     <li>Computers</li>
+                     <li><a href="#">Laptops</a></li>
+                     <li><a href="#">Desktops</a></li>
+                     <li><a href="#">Grades</a></li>
+                     <li><a href="#">Accessories</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i class="icon-electronics"></i>Electronics</a>
+                  <ul class="hidden">
+                     <li>Electronics</li>
+                     <li><a href="#">Small Machines</a></li>
+                     <li><a href="#">Wireless & Bluetooth</a></li>
+                     <li><a href="#">For Security </a></li>
+                     <li><a href="#">Others</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i class="icon-household"></i>Household</a>
+                  <ul class="hidden">
+                     <li>Household</li>
+                     <li><a href="#">Office</a></li>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">Outdoor</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i class="icon-media"></i>Media & Devices</a>
+                  <ul class="hidden">
+                     <li>Media & Devices</li>
+                     <li><a href="#">Games</a></li>
+                     <li><a href="#">E-Books</a></li>
+                     <li><a href="#">Dowloads</a></li>
+                     <li><a href="#">Templates</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i class="icon-tools"></i>Tools & Crafts</a>
+                  <ul class="hidden">
+                     <li>Tools & Crafts</li>
+                     <li><a href="#">Office</a></li>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">Outdoor</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i class="icon-automobiles"></i>Automobiles</a>
+                  <ul class="hidden">
+                     <li>Automobiles</li>
+                     <li><a href="#">Auto Sale</a></li>
+                     <li><a href="#">Repairs</a></li>
+                     <li><a href="#">Auto parts</a></li>
+                     <li><a href="#">Vehicle Security</a></li>
+                  </ul>
+               </li>
+               <li class="submenu-title">
+                  <a href="#"><i class="icon-security"></i>Security & Protection</a>
+                  <ul class="hidden">
+                     <li>Security</li>
+                     <li><a href="#">Office</a></li>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">Outdoor</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!--SIDE MENU--><!--SLIDER CAROUSEL-->
+      <!--HEADER-->
+      <div class="header">
+         <div class="slider">
+            <div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <img src="img/galaxyS.jpg" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="img/IPHONES.jpg" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="img/S10PLUS.jpg" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="img/IPHONES.jpg" class="d-block w-100" alt="">
+                  </div>
+               </div>
+               <ol class="carousel-indicators">
+                  <li data-target="#slider" data-slide-to="0" class="active"></li>
+                  <li data-target="#slider" data-slide-to="1"></li>
+                  <li data-target="#slider" data-slide-to="2"></li>
+                  <li data-target="#slider" data-slide-to="3"></li>
+               </ol>
             </div>
+         </div>
       </div>
-    </div>
-    
- <!-- POPULAR END -->
-
-<!-- BANNER AD -->
-<div class="popular-prd-discounts">
-      <div class="wrapper-popular-prd">
-        <a class="banner-popular-prd">
-          <img src="img/banner1.png" alt="" class="img-popular-prd" width="90%">
-        </a>
-       
-    </div>
- 
-</div>
-<!-- BANNER AD END -->
-</section>
-
-
-             <!-- FEATURED -->
-<section class="section-featured-deals">
-  <div class="featured-deals-box"><h3 class="h3-featured-deals-box">Featured</h3></div>
-  <!-- PRODUCT-BOX -->
-  <div class=" " id="product-box">
-    <div class="product-grid">
-        <div class="product-image">
-            <a href="product.html">
-               <img class="pic-1" src="img/miniblender.png" alt="Phone Lens">
-                <img class="pic-2" src=" img/miniblender2.png" alt="Phone Lens">
-            </a>
-            <ul class="social">
-                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-            </ul>
-            <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-       
-        <div class="product-content">
-            <h6 class="title"><a href="#">Mini-blender</a></h6>
-            <h6>$10.00 - $20.00</h6>
-        </div>
-    </div>
-     </div>
-  <div class="product-grid">
-        <div class="product-image">
-            <a href="product.html">
-  <img class="pic-1" src=" img/phonelens.png" alt="Phone Lens">
-                <img class="pic-2" src=" img/phonelens1.png" alt="Phone Lens">
-            </a>
-            <ul class="social">
-                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-            </ul>
-            <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-       
-        <div class="product-content">
-            <h6 class="title"><a href="#">Phone Lens</a></h6>
-            <h6>$2.00 - $8.00</h6>
-        </div>
-    </div>
-     </div> 
-     
-     <div class="product-grid">
-      <div class="product-image">
-          <a href="product.html">
-              <img class="pic-1" src="img/childwristsecure.png" alt="Phone Lens">
-              <img class="pic-2" src=" img/childwristsecure1.png" alt="Phone Lens">
-          </a>
-          <ul class="social">
-              <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-              <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-          </ul>
-          <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-     
-      <div class="product-content">
-          <h6 class="title"><a href="#"> Child wrist leash</a></h6>
-          <h6>$3.00 - $7.00</h6>
-      </div>
-  </div>
-   </div>
-
-   <div class="product-grid">
-    <div class="product-image">
-        <a href="product.html">
-            <img class="pic-1" src="img/childwristsecure.png" alt="Phone Lens">
-            <img class="pic-2" src=" img/childwristsecure1.png" alt="Phone Lens">
-        </a>
-        <ul class="social">
-            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-        </ul>
-        <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-   
-    <div class="product-content">
-        <h6 class="title"><a href="#"> Child wrist leash</a></h6>
-        <h6>$3.00 - $7.00</h6>
-    </div>
-</div>
- </div>
-
- <div class="product-grid">
-  <div class="product-image">
-      <a href="product.html">
-          <img class="pic-1" src="img/childwristsecure.png" alt="Phone Lens">
-          <img class="pic-2" src=" img/childwristsecure1.png" alt="Phone Lens">
-      </a>
-      <ul class="social">
-          <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-          <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-          <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-      </ul>
-      <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
- 
-  <div class="product-content">
-      <h6 class="title"><a href="#"> Child wrist leash</a></h6>
-      <h6>$3.00 - $7.00</h6>
-  </div>
-</div>
-</div>
-<div class="product-grid">
-  <div class="product-image">
-      <a href="product.html">
-          <img class="pic-1" src="img/childwristsecure.png" alt="Phone Lens">
-          <img class="pic-2" src=" img/childwristsecure1.png" alt="Phone Lens">
-      </a>
-      <ul class="social">
-          <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-          <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-          <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-      </ul>
-      <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
- 
-  <div class="product-content">
-      <h6 class="title"><a href="#"> Child wrist leash</a></h6>
-      <h6>$3.00 - $7.00</h6>
-  </div>
-</div>
-</div>
-     <div class="product-grid">
-        <div class="product-image">
-            <a href="product.html">
-                <img class="pic-1" src="img/childwristsecure.png" alt="Phone Lens">
-                <img class="pic-2" src=" img/childwristsecure1.png" alt="Phone Lens">
-            </a>
-            <ul class="social">
-                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-            </ul>
-            <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-       
-        <div class="product-content">
-            <h6 class="title"><a href="#"> Child wrist leash</a></h6>
-            <h6>$3.00 - $7.00</h6>
-        </div>
-    </div>
-     </div> <div class="product-grid">
-        <div class="product-image">
-            <a href="product.html">
-  <img class="pic-1" src=" img/icecreammakermini.png" alt="Phone Lens">
-                <img class="pic-2" src=" img/icecreammakermini1.png" alt="Phone Lens">
-            </a>
-            <ul class="social">
-                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-            </ul>
-            <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-       
-        <div class="product-content">
-            <h6 class="title"><a href="#">Mini Ice-cream maker</a></h6>
-            <h6>$25.00 - $45.00</h6>
-        </div>
-    </div>
-     </div> <div class="product-grid">
-        <div class="product-image">
-            <a href="product.html">
-  <img class="pic-1" src=" img/waterproofshoecover.png" alt="Phone Lens">
-                <img class="pic-2" src=" img/waterproofshoecover1.png" alt="Phone Lens">
-            </a>
-  
-            <ul class="social">
-                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-            </ul>
-            <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
-       
-        <div class="product-content">
-            <h6 class="title"><a href="#">Waterproof Shoe Cover</a></h6>
-            <h6>$1.100 - $2.100</h6>
-        </div>
-    </div>
-     </div>
-     
-    </div>
-  </div>
-   <p class="swipe">Swipe for more<i class="fas fa-angle-double-left" style="vertical-align: middle; margin-left: 5px;"></i></p>
-</section>
-
-
-<hr>
-
-<section>
-<!-- Intro wrapper -->
-<div class="layout-intro" id="layout-intro">  
-
-  <div class="cards-layout-intro" id="cards-layout-intro">
-    <div class="header-layout-intro"><h4 class="h4-header-layout-intro">New to Regrooms?</h4></div>
-<!-- main view wrapper 1-->
-    <div class="imgs-layout-intro">
-      <div class="images-layout-intro">
-        <a href="store.html"  class="a-imgs-layout-intro">
-          <img src="img/fashion-card.png" alt="Female fashion" class="intro-img" width="125" height="125">
-        </a>
-        <p class="p-img-layout-intro">Electronics</p>
-      </div>
-      
-      <div class="images-layout-intro">
-        <a href="store.html"  class="a-imgs-layout-intro">
-          <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
-        </a>
-        <p class="p-img-layout-intro">Fashion</p>
-      </div>
-      <div class="images-layout-intro">
-        <a href="#fashion-pg"  class="a-imgs-layout-intro">
-          <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
-        </a>
-        <p class="p-img-layout-intro">Phones and Gadgets</p>
-      </div>
-      <div class="images-layout-intro">
-        <a href="#fashion-pg"class="a-imgs-layout-intro">
-          <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
-        </a> 
-         <p class="p-img-layout-intro">Wedding & Party</p>
-        </div>
-      </div>
-
-      <div class="footer-layout-intro">
-        <a href="store.html" class="a-intro-card-footer">Browse Categories</a>
-      </div>
-    </div>
-
-
-     
- 
-
-<div class="single-card-layout-intro" id="single-card-layout-intro">
-  <div class="header-layout-intro"><h4 class="h4-header-layout-intro">Top deal</h4></div>
-
-  <div class="img-layout-intro">
-    <a href="store.html" class="a-imgs-layout-intro-single">
-      <img src="img/sony-ps5.png" alt="Female fashion" class="top-deal-img" width="275" height="275">
-    </a>
-    <p class="p-img-layout-intro">Get best descount deals in Electronics</p>
-  </div>
-  
-  <div class="footer-layout-intro">
-    <a href="store.html" class="a-intro-card-footer">Explore more deals</a>
-  </div>
-</div>
-
-<div class="single-card-layout-intro" id="single-card-layout-intro">
-  <div class="header-layout-intro"><h4 class="h4-header-layout-intro">Downloads & Offers</h4></div>
- 
-      <div class="img-layout-intro">
-        <a href="store.html"  class="a-imgs-layout-intro-single">
-
-        <img src="img/fashion-card.png" alt="Female fashion" class="intro-img" width="275" height="275">
-     </a>
-     <p class="p-img-layout-intro">Electronics</p>
-    </div>
-
-      <div class="footer-layout-intro">
-        <a href="store.html" class="a-intro-card-footer">See more</a>
-      </div>
- 
-     
-</div>
-
-<div class="single-card-layout-intro" id="single-card-layout-intro">
-  <div class="header-layout-intro"><h4 class="h4-header-layout-intro">Downloads & Offers</h4></div>
- 
-      <div class="img-layout-intro">
-        <a href="store.html"  class="a-imgs-layout-intro-single">
-
-        <img src="img/fashion-card.png" alt="Female fashion" class="intro-img" width="275" height="275">
-     </a>
-     <p class="p-img-layout-intro">Electronics</p>
-    </div>
-
-      <div class="footer-layout-intro">
-        <a href="store.html" class="a-intro-card-footer">See more</a>
-      </div>
- 
-     
-</div>
-     
- 
-
- 
-      </div>
-</section>
-<hr>
-<!-- TRENDING -->
-<section class="container">
-    <div class="leade">
-      <h3>Trending Now</h3>
-    </div>
-    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-        <div class="carousel-inner w-100" role="listbox">
-            <div class="carousel-item row no-gutters active">
-                <div class="col-3 float-left"><img class="img-fluid" alt="Playstation5" src="img/ps5.jpg"></div>
-                <div class="col-3 float-left"><img class="img-fluid" alt="Xbox" src="img/xbox-one.jpg"></div>
-                <div class="col-3 float-left"><img class="img-fluid" alt="Nike latest" src="img/nikeairVM.png"></div>
-                <div class="col-3 float-left"><img class="img-fluid" alt="spywatch" src="img/s-l300-spywatch.jpg"></div>
+      <!-- Intro wrapper -->
+      <div class=" container fluid">
+         <div class="layout-intro"  >
+            <div class="cards-layout-intro" >
+               <div class="header-layout-intro">
+                  <h4 class="h4-header-layout-intro">New to Regrooms?</h4>
+               </div>
+               <!-- main view wrapper 1-->
+               <div class="imgs-layout-intro">
+                  <div class="images-layout-intro">
+                     <a href="clothing.html"  class="a-imgs-layout-intro">
+                     <img src="img/fashion-card.png" alt="Female fashion" class="intro-img" width="125" height="125">
+                     </a>
+                     <p class="p-img-layout-intro">Fashion</p>
+                  </div>
+                  <div class="images-layout-intro">
+                     <a href="electronics.html"  class="a-imgs-layout-intro">
+                     <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
+                     </a>
+                     <p class="p-img-layout-intro">Electronics</p>
+                  </div>
+                  <div class="images-layout-intro">
+                     <a href="#fashion-pg"  class="a-imgs-layout-intro">
+                     <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
+                     </a>
+                     <p class="p-img-layout-intro">Phones and Gadgets</p>
+                  </div>
+                  <div class="images-layout-intro">
+                     <a href="#fashion-pg" class="a-imgs-layout-intro">
+                     <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
+                     </a>
+                     <p class="p-img-layout-intro">Wedding & Party</p>
+                  </div>
+               </div>
+               <div class="footer-layout-intro">
+                  <a href="store.html" class="a-intro-card-footer">Browse Categories</a>
+               </div>
             </div>
-            <div class="carousel-item row no-gutters">
-                <div class="col-3 float-left"><img class="img-fluid" alt="distresswhistle" src="img/distress-whistle.jpg" alt=""></div>
-                <div class="col-3 float-left"><img class="img-fluid" src="img/pepperspraygun.jpg" alt=""></div>
-                <div class="col-3 float-left"><img class="img-fluid" src="img/finger-guard.jpeg" alt=""></div>
-                <div class="col-3 float-left"><img class="img-fluid" src="img/OnePlus-9-Pro-5.jpg" alt=""></div>
+            <div class="single-card-layout-intro"  >
+               <div class="header-layout-intro">
+                  <h4 class="h4-header-layout-intro">Top deal</h4>
+               </div>
+               <div class="img-layout-intro">
+                  <a href="store.html" class="a-imgs-layout-intro-single">
+                  <img src="img/sony-ps5.png" alt="Female fashion" class="top-deal-img" width="275" height="275">
+                  </a>
+                  <p class="p-img-layout-intro">Get best descount deals in Electronics</p>
+               </div>
+               <div class="footer-layout-intro">
+                  <a href="store.html" class="a-intro-card-footer">Explore more deals</a>
+               </div>
             </div>
-        </div>
-        <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+            <div class="single-card-layout-extra" id="single-card-layout-extra">
+               <div class="header-layout-intro">
+                  <h4 class="h4-header-layout-intro">Downloads & Offers</h4>
+               </div>
+               <div class="img-layout-intro">
+                  <a href="household.html"  class="a-imgs-layout-intro-single">
+                  <img src="img/fashion-card.png" alt="Female fashion" class="intro-img" width="275" height="275">
+                  </a>
+                  <p class="p-img-layout-intro">Household</p>
+               </div>
+               <div class="footer-layout-intro">
+                  <a href="store.html" class="a-intro-card-footer">See more</a>
+               </div>
+            </div>
+            <div class="signup-card">
+               <div class="header-layout-intro">
+                  <h4> Jump in for better experience</h4>
+               </div>
+               <span class="signup-card-btn"><a href="login.html" class="a-signup-card">Sign in securely</a></span>
+            </div>
+         </div>
+      </div>
+      <!-- SUPER DEALS -->
+      <section class="section-flash-deals">
+         <div class="flash-deals-box">
+            <h3 class="h3-flash-deals-box">Flash deals</h3>
+         </div>
+         <!-- PRODUCT-BOX -->
+         <div class="product-box">
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/neckfan.png" alt="Phone Lens">
+                  <img class="pic-2" src="img/neckfan1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Hands-free Neckband fan</a></h6>
+                     <h6>$30.00 - $10.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/pepperspraygun.png" alt="Phone Lens">
+                  <img class="pic-2" src="img/pepperspraygun1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Pepperspray gun</a></h6>
+                     <h6>$2.00 - $8.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/smartwatch.png" alt="Phone Lens">
+                  <img class="pic-2" src="img/smartwatch1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#"> Smart watch</a></h6>
+                     <h6>$3.00 - $7.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/spycamera.png" alt="Phone Lens">
+                  <img class="pic-2" src="img/spycamera1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Spy camera</a></h6>
+                     <h6>$25.00 - $45.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/stungunring.png" alt="Phone Lens">
+                  <img class="pic-2" src="img/stungunring1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Stun ring</a></h6>
+                     <h6>$1.100 - $2.100</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/babyheadwearbunny.png" alt="Phone Lens">
+                  <img class="pic-2" src="img/babyheadwearbunny1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Baby headwear </a></h6>
+                     <h6>$1.100 - $2.100</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/babyheadwearbunny.png" alt="Phone Lens">
+                  <img class="pic-2" src="img/babyheadwearbunny1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Baby headwear </a></h6>
+                     <h6>$1.100 - $2.100</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/babyheadwearbunny.png" alt="Phone Lens">
+                  <img class="pic-2" src="img/babyheadwearbunny1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Baby headwear </a></h6>
+                     <h6>$1.100 - $2.100</h6>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <p class="swipe">Swipe for more<i class="fas fa-angle-double-left" style="vertical-align: middle; margin-left: 5px;"></i></p>
+      </section>
+      <section class="popular-prd">
+         <!-- POPULAR THIS WEEK-->
+         <div class="h2-section-title text-center">
+            <h3>Popular this week</h3>
+         </div>
+         <div class="popular-prd-inner">
+            <div class="banner-popular-prd">
+               <div class="img-popular-prd">
+                  <a class="banner-popular-prd">
+                  <img src="img/carcamera1.png" alt="" class="img-popular-prd">
+                  </a>
+               </div>
+               <div class="img-popular-prd">
+                  <a class="banner-popular-prd">
+                  <img src="img/hdphoneprojector1.png" alt="" class="img-popular-prd">
+                  </a>
+               </div>
+            </div>
+            <div class="banner-popular-prd">
+               <div class="img-popular-prd">
+                  <a class="banner-popular-prd">
+                  <img src="img/carcamera1.png" alt="" class="img-popular-prd">
+                  </a>
+               </div>
+               <div class="img-popular-prd">
+                  <a class="banner-popular-prd">
+                  <img src="img/fash3.jpg" alt="" class="img-popular-prd">
+                  </a>
+               </div>
+            </div>
+         </div>
+         <!-- POPULAR END -->
+         <!-- BANNER AD -->
+         <div class="popular-prd-discounts">
+            <div class="wrapper-popular-prd">
+               <a class="banner-popular-prd">
+               <img src="img/banner1.png" alt="" class="img-popular-prd" width="90">
+               </a>
+            </div>
+         </div>
+         <!-- BANNER AD END -->
+      </section>
+      <!-- FEATURED -->
+      <section class="section-featured-deals">
+         <div class="featured-deals-box">
+            <h3 class="h3-featured-deals-box">Featured</h3>
+         </div>
+         <!-- PRODUCT-BOX -->
+         <div class=" product-box" id="product-box">
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/miniblender.png" alt="Phone Lens">
+                  <img class="pic-2" src=" img/miniblender2.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Mini-blender</a></h6>
+                     <h6>$10.00 - $20.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src=" img/phonelens.png" alt="Phone Lens">
+                  <img class="pic-2" src=" img/phonelens1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Phone Lens</a></h6>
+                     <h6>$2.00 - $8.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/childwristsecure.png" alt="Phone Lens">
+                  <img class="pic-2" src=" img/childwristsecure1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#"> Child wrist leash</a></h6>
+                     <h6>$3.00 - $7.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/childwristsecure.png" alt="Phone Lens">
+                  <img class="pic-2" src=" img/childwristsecure1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#"> Child wrist leash</a></h6>
+                     <h6>$3.00 - $7.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/childwristsecure.png" alt="Phone Lens">
+                  <img class="pic-2" src=" img/childwristsecure1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#"> Child wrist leash</a></h6>
+                     <h6>$3.00 - $7.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/childwristsecure.png" alt="Phone Lens">
+                  <img class="pic-2" src=" img/childwristsecure1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#"> Child wrist leash</a></h6>
+                     <h6>$3.00 - $7.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src="img/childwristsecure.png" alt="Phone Lens">
+                  <img class="pic-2" src=" img/childwristsecure1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#"> Child wrist leash</a></h6>
+                     <h6>$3.00 - $7.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src=" img/icecreammakermini.png" alt="Phone Lens">
+                  <img class="pic-2" src=" img/icecreammakermini1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Mini Ice-cream maker</a></h6>
+                     <h6>$25.00 - $45.00</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="product-grid">
+               <div class="product-image">
+                  <a href="product.html">
+                  <img class="pic-1" src=" img/waterproofshoecover.png" alt="Phone Lens">
+                  <img class="pic-2" src=" img/waterproofshoecover1.png" alt="Phone Lens">
+                  </a>
+                  <ul class="social">
+                     <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                     <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                     <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                  <div class="product-content">
+                     <h6 class="title"><a href="#">Waterproof Shoe Cover</a></h6>
+                     <h6>$1.100 - $2.100</h6>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <p class="swipe">Swipe for more<i class="fas fa-angle-double-left" style="vertical-align: middle; margin-left: 5px;"></i></p>
+      </section>
+      <hr>
+      <section>
+         <!-- Intro wrapper -->
+         <div class="layout-intro">
+            <div class="cards-layout-intro" id="cards-layout-intro">
+               <div class="header-layout-intro">
+                  <h4 class="h4-header-layout-intro">New to Regrooms?</h4>
+               </div>
+               <!-- main view wrapper 1-->
+               <div class="imgs-layout-intro">
+                  <div class="images-layout-intro">
+                     <a href="store.html" class="a-imgs-layout-intro">
+                     <img src="img/fashion-card.png" alt="Female fashion" class="intro-img" width="125" height="125">
+                     </a>
+                     <p class="p-img-layout-intro">Electronics</p>
+                  </div>
+                  <div class="images-layout-intro">
+                     <a href="store.html" class="a-imgs-layout-intro">
+                     <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
+                     </a>
+                     <p class="p-img-layout-intro">Fashion</p>
+                  </div>
+                  <div class="images-layout-intro">
+                     <a href="#fashion-pg" class="a-imgs-layout-intro">
+                     <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
+                     </a>
+                     <p class="p-img-layout-intro">Phones and Gadgets</p>
+                  </div>
+                  <div class="images-layout-intro">
+                     <a href="#fashion-pg" class="a-imgs-layout-intro">
+                     <img src="img/electronics-card-img.png" alt="Female fashion" class="intro-img" width="125" height="125">
+                     </a>
+                     <p class="p-img-layout-intro">Wedding & Party</p>
+                  </div>
+               </div>
+               <div class="footer-layout-intro">
+                  <a href="store.html" class="a-intro-card-footer">Browse Categories</a>
+               </div>
+            </div>
+            <div class="single-card-layout-intro"  >
+               <div class="header-layout-intro">
+                  <h4 class="h4-header-layout-intro">Top deal</h4>
+               </div>
+               <div class="img-layout-intro">
+                  <a href="store.html" class="a-imgs-layout-intro-single">
+                  <img src="img/sony-ps5.png" alt="Female fashion" class="top-deal-img" width="275" height="275">
+                  </a>
+                  <p class="p-img-layout-intro">Get best descount deals in Electronics</p>
+               </div>
+               <div class="footer-layout-intro">
+                  <a href="store.html" class="a-intro-card-footer">Explore more deals</a>
+               </div>
+            </div>
+            <div class="single-card-layout-intro"  >
+               <div class="header-layout-intro">
+                  <h4 class="h4-header-layout-intro">Downloads & Offers</h4>
+               </div>
+               <div class="img-layout-intro">
+                  <a href="store.html"  class="a-imgs-layout-intro-single">
+                  <img src="img/fashion-card.png" alt="Female fashion" class="intro-img" width="275" height="275">
+                  </a>
+                  <p class="p-img-layout-intro">Electronics</p>
+               </div>
+               <div class="footer-layout-intro">
+                  <a href="store.html" class="a-intro-card-footer">See more</a>
+               </div>
+            </div>
+            <div class="single-card-layout-intro"  >
+               <div class="header-layout-intro">
+                  <h4 class="h4-header-layout-intro">Downloads & Offers</h4>
+               </div>
+               <div class="img-layout-intro">
+                  <a href="store.html"  class="a-imgs-layout-intro-single">
+                  <img src="img/fashion-card.png" alt="Female fashion" class="intro-img" width="275" height="275">
+                  </a>
+                  <p class="p-img-layout-intro">Electronics</p>
+               </div>
+               <div class="footer-layout-intro">
+                  <a href="store.html" class="a-intro-card-footer">See more</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <hr>
+      <!-- TRENDING -->
+      <section class="container">
+         <div class="leade">
+            <h3>Trending Now</h3>
+         </div>
+         <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner w-100" role="listbox">
+               <div class="carousel-item row no-gutters active">
+                  <div class="col-3 float-left"><img class="img-fluid" alt="Playstation5" src="img/ps5.jpg"></div>
+                  <div class="col-3 float-left"><img class="img-fluid" alt="Xbox" src="img/xbox-one.jpg"></div>
+                  <div class="col-3 float-left"><img class="img-fluid" alt="Nike latest" src="img/nikeairVM.png"></div>
+                  <div class="col-3 float-left"><img class="img-fluid" alt="spywatch" src="img/s-l300-spywatch.jpg"></div>
+               </div>
+               <div class="carousel-item row no-gutters">
+                  <div class="col-3 float-left"><img class="img-fluid" alt="distresswhistle" src="img/distress-whistle.jpg"></div>
+                  <div class="col-3 float-left"><img class="img-fluid" src="img/pepperspraygun.jpg" alt="pepperspraygun"></div>
+                  <div class="col-3 float-left"><img class="img-fluid" src="img/finger-guard.jpeg" alt=""></div>
+                  <div class="col-3 float-left"><img class="img-fluid" src="img/OnePlus-9-Pro-5.jpg" alt=""></div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+            </a>
+            <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-        </a>
-    </div>
-</section>
+            </a>
+         </div>
+      </section>
+      <hr>
+      <!-- /Footer -->
+      <footer class="footer" style=" padding-top: 0px; padding-bottom: 0px;">
+         <div class="separator">
+            <h2>Shop with us</h2>
+         </div>
+         <div class="flex-container-fluid" id="footer">
+            <div class="d-flex justify-content-around flex-wrap" id="popular">
+               <div class="link">
+                  <ul class="links">
+                     <li><a  href="#">For Him</a></li>
+                     <li><a  href="#">For Her</a></li>
+                     <li><a  href="#">Juniors </a></li>
+                     <li><a  href="#">Shoes/wears</a></li>
+                  </ul>
+                  <ul class="links">
+                     <li> <a  href="#">Automobile</a></li>
+                     <li> <a  href="#">Phones</a></li>
+                     <li> <a  href="#">Gadgets</a></li>
+                     <li> <a  href="#">Accessories</a></li>
+                  </ul>
+                  <ul class="links">
+                     <li> <a  href="#">Replacements</a></li>
+                     <li> <a  href="#">Gadgets</a></li>
+                     <li> <a  href="#">Accessories</a></li>
+                     <li> <a  href="#">Replacements</a></li>
+                  </ul>
+                  <ul class="links">
+                     <li> <a  href="#">Delivery options</a></li>
+                     <li> <a  href="#">Making payments</a></li>
+                     <li> <a  href="#">Buyers protection</a></li>
+                     <li> <a  href="#">Returns</a></li>
+                  </ul>
+                  <ul class="links">
+                     <li> <a  href="#">Terms of use</a></li>
+                     <li> <a  href="#">F.A.Q</a></li>
+                     <li> <a  href="#">Buyers protection</a></li>
+                     <li> <a  href="#">Privacy policy</a></li>
+                  </ul>
+                  <!-- /get intouch -->
+                  <div class="col-sd-6 col-sd-offset-3" id="contact-form">
+                     <h6 class="text-center">Get in-touch</h6>
+                     <form action="/action_page.php">
+                        <input type="text" id="Email" name="Email" placeholder="Your email..">
+                        <select id="issue" name="issue">
+                           <option value="" disabled selected>Select an option</option>
+                           <option value="Enquries">Enquiries</option>
+                           <option value="Problem">report a problem</option>
+                           <option value="usa">payment issues</option>
+                        </select>
+                        <div class="contact-dt">
+                           <textarea id="subject" name="subject" rows="2" placeholder="Send us a message.."></textarea>
+                           <button class="contact-btn" type="submit">submit</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <!-- /Footer socials -->
+            <div class="separator">
+               <h2>Connect with us</h2>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between" id="footer-e">
+               <div class="" id="brand-logo">
+                  <a class=""  href="index.html">
+                  <img class="brand-logo" src="img/brand.png" alt="" width="150">
+                  </a>
+               </div>
+               <div class="contact-box">
+                  <form action="/action_page.php">
+                     <div class="cntact-socl">
+                        <a href="https://www.facebook.com/"><i id="social-fb" class="fab fa-facebook-square fa-2x social"></i></a>
+                        <a href="https://twitter.com/"><i id="social-tw" class="fab fa-twitter-square fa-2x social"></i></a>
+                        <a href="https://plus.google.com/"><i id="social-gp" class="fab fa-google-plus-square fa-2x social"></i></a>
+                        <a href="mailto:zrogba@gmail.com"><i id="social-yt" class="fab fa-youtube-square fa-2x social"></i></a>
+                        <a href="mailto:zrogba@gmail.com"><i id="social-pn" class="fab fa-pinterest-square fa-2x social"></i></a>
+                        <a href="mailto:zrogba@gmail.com"><i id="social-in" class="fab fa-instagram-square fa-2x social"></i></a>
+                     </div>
+                     <div class="contact-info">
+                        <input class="" type="email" maxlength="40" placeholder="What's your email?">
+                        <button class="info-btn" type="submit"><i class="fa fa-arrow-right"></i></button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            <hr style="margin: 0; border: none;">
+            <p class="copyright">© 2020 Regrooms - All Rights Reserved.</p>
+         </div>
+      </footer>
+      <!--SCRIPTS-->
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "16.2rem";
+         }
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script>
+      <script>
+         function openCity(evt, cityName) {
+         // Declare all variables
+         var i, tabcontent, tablinks; // Get all elements with class="tabcontent" and hide them
 
-<hr>
-<!-- /Footer -->
-<footer class="footer" style=" padding-top: 0px; padding-bottom: 0px;">
-  <div class="separator"><h2>Shop with us</h2></div>
-  <div class="flex-container-fluid" id="footer">
-  <div class="d-flex justify-content-around flex-wrap" id="popular">
-      
-      <div class="link">
-            <ul class="links">
-              <li><a  href="#">For Him</a></li>
-              <li><a  href="#">For Her</a></li>   
-              <li><a  href="#">Juniors </a></li>  
-              <li><a  href="#">Shoes/wears</a></li>
-            </ul>
-      
-            <ul class="links">
-            <li> <a  href="#">Automobile</a></li>
-            <li> <a  href="#">Phones</a></li>
-            <li> <a  href="#">Gadgets</a></li>
-            <li> <a  href="#">Accessories</a></li>
-          </ul>
-    
-          <ul class="links">
-            <li> <a  href="#">Replacements</a></li>
-            <li> <a  href="#">Gadgets</a></li>
-            <li> <a  href="#">Accessories</a></li>
-            <li> <a  href="#">Replacements</a></li>
-          </ul>    
-       
-     <ul class="links">
-            <li> <a  href="#">Delivery options</a></li>
-            <li> <a  href="#">Making payments</a></li>
-            <li> <a  href="#">Buyers protection</a></li>
-            <li> <a  href="#">Returns</a></li>
-          </ul>  
-  
-     <ul class="links">
-            <li> <a  href="#">Terms of use</a></li>
-            <li> <a  href="#">F.A.Q</a></li>
-            <li> <a  href="#">Buyers protection</a></li>
-            <li> <a  href="#">Privacy policy</a></li>
-          </ul>  
- 
-<!-- /get intouch -->
-  
-         
-       
-   <div class="col-sd-6 col-sd-offset-3" id="contact-form">
-     <h6 class="text-center">Get in-touch</h6>
-      <form action="/action_page.php">
+         tabcontent = document.getElementsByClassName("tabcontent");
 
-        <input type="text" id="Email" name="Email" placeholder="Your email..">
-        <select id="issue" name="issue">
-          <option value="" disabled selected>Select an option</option>
-          <option value="Enquries">Enquiries</option>
-          <option value="Problem">report a problem</option>
-          <option value="usa">payment issues</option>
-        </select>
+         for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+         } // Get all elements with class="tablinks" and remove the class "active"
 
-<div class="contact-dt">
-          
-        
-  <textarea id="subject" name="subject" rows="2" placeholder="Send us a message.."></textarea>
-<button class="contact-btn" type="submit">submit</button>
-      </div>
-     
-  
-      </form>
- </div>
-  </div>
-  </div>
-   
 
-<!-- /Footer socials -->
-     <div class="separator"><h2>Connect with us</h2></div>
- <div class="d-flex flex-wrap justify-content-between" id="footer-e">
-  <div class="" id="brand-logo">
-    <a class="" id="brand-logo" href="index.html">
-      <img class="brand-logo" src="img/brand.png" alt="" width="150">
-     
-      </a>
-    </div>
-   <div class="contact-box">
-  <form action="/action_page.php">
-        <div class="cntact-socl">
-            <a href="https://www.facebook.com/"><i id="social-fb" class="fab fa-facebook-square fa-2x social"></i></a>
-            <a href="https://twitter.com/"><i id="social-tw" class="fab fa-twitter-square fa-2x social"></i></a>
-            <a href="https://plus.google.com/"><i id="social-gp" class="fab fa-google-plus-square fa-2x social"></i></a>
-            <a href="mailto:zrogba@gmail.com"><i id="social-yt" class="fab fa-youtube-square fa-2x social"></i></a>
-            <a href="mailto:zrogba@gmail.com"><i id="social-pn" class="fab fa-pinterest-square fa-2x social"></i></a>
-            <a href="mailto:zrogba@gmail.com"><i id="social-in" class="fab fa-instagram-square fa-2x social"></i></a>
- 
-</div>
-  <div class="contact-info">
-    <input class="" type="email" maxlength="40" placeholder="What's your email?">
-    <button class="info-btn" type="submit"><i class="fa fa-arrow-right"></i></button>
-  
-</div>
- 
+         tablinks = document.getElementsByClassName("tablinks");
 
-  </form>
+         for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" active", "");
+         } // Show the current tab, and add an "active" class to the button that opened the tab
 
-</div>
-</div>
-<hr style="margin: 0; border: none;">
 
-    <p class="copyright">© 2020 Regrooms - All Rights Reserved.</p>
+         document.getElementById(cityName).style.display = "block";
+         evt.currentTarget.className += " active";
+         }
 
-</div>
-</footer>
-<!-- /Footer -->
- 
-<script>
-  function openNav() {
-  document.getElementById("mySidenav").style.width = "16.2rem";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-   
-   <script>
-     function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
- 
-   </script>
-<script>
-  // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-
-<script>
-  
-// Get the element with id="defaultOpen" and click on it
-  function setCar() {
-      var img = document.getElementById("flagIcons");
-      img.src = this.value;
-      return false;
-  }
-  document.getElementById("currency").onchange = setCar;
-</script>
-
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
-       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-   
-</body>
-
+      </script>
+      <script>
+         document.getElementById("defaultOpen").click();// Get the element with id="defaultOpen" and click on it
+      </script>
+      <script>
+         // Get the element with id="defaultOpen" and click on it
+           function setFlags() {
+               var img = document.getElementById("flagIcons");
+               img.src = this.value;
+               return false;
+           }
+           document.getElementById("currency").onchange = setFlags;
+      </script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   </body>
 </html>
- 
